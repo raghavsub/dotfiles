@@ -30,7 +30,6 @@ set smartindent
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set showmatch
 set laststatus=2
 set nobackup
 set noswapfile
@@ -45,10 +44,6 @@ let mapleader=","
 
 " avoid escape
 inoremap jj <ESC>
-
-" vimrc access
-nnoremap <silent> <leader>e :e $MYVIMRC<CR>
-nnoremap <silent> <leader>s :so $MYVIMRC<CR>
 
 " file toggle
 nnoremap <silent> <leader><leader> :e#<CR>
@@ -73,6 +68,9 @@ nnoremap <silent> <leader>r :CommandTFlush<CR>
 
 " lightline
 let g:lightline = {'colorscheme': 'seoul256',}
+
+" markdown
+au BufNewFile,BufRead *.txt set filetype=markdown
 
 " arrow keys
 noremap <left> <nop>
