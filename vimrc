@@ -4,11 +4,10 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'christoomey/vim-tmux-navigator'   " tmux
-Plug 'ervandew/supertab'                " completion
-Plug 'itchyny/lightline.vim'            " line
-Plug 'junegunn/seoul256.vim'            " color
-Plug 'wincent/command-t'                " fuzzy
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'ervandew/supertab'
+Plug 'junegunn/seoul256.vim'
+Plug 'wincent/command-t'
 
 call plug#end()
 

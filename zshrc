@@ -1,11 +1,8 @@
 # Raghav Subramaniam
 # .zshrc
 
-autoload -U colors && colors
-autoload -U promptinit && promptinit
-
-# prompt
-prompt pure
+autoload -U colors
+colors
 
 # don't need to type cd
 setopt auto_cd
@@ -38,6 +35,10 @@ alias la="ls -a"
 alias ll="ls -ltr"
 alias clc="clear"
 alias rm="rm -i"
+
+# custom prompt
+setopt PROMPT_SUBST
+prompt="%{$fg[cyan]%}[%~]%{$reset_color%} $ "
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
