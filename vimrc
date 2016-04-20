@@ -4,9 +4,9 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
-Plug 'junegunn/seoul256.vim'
 Plug 'wincent/command-t'
 
 call plug#end()
@@ -35,7 +35,7 @@ set noswapfile
 set clipboard=unnamed
 
 " colors
-colo seoul256
+colo solarized
 set background=dark
 
 " leader
