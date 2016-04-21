@@ -34,7 +34,6 @@ set expandtab
 set laststatus=2
 set nobackup
 set noswapfile
-set clipboard=unnamed
 
 " colors
 colo seoul256
@@ -66,6 +65,15 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" custom status line
+set statusline=
+set statusline+=%m\ %F
+set statusline+=%<
+set statusline+=%=
+set statusline+=buf:%-3n
+set statusline+=col:%-3.c
+set statusline+=%y
+
 " filetypes
 au BufNewFile,BufRead *.txt set filetype=markdown
 
@@ -87,3 +95,7 @@ set statusline+=%=
 set statusline+=buf:%-3n
 set statusline+=col:%-3.c
 set statusline+=%y
+
+" guioptions
+set guioptions-=r
+set guifont=Fira\ Mono:h13
