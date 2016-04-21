@@ -85,5 +85,5 @@ set statusline+=%m\ %F
 set statusline+=%<
 set statusline+=%=
 set statusline+=buf:%-3n
-set statusline+=col:%-3c
+set statusline+=col:%-3.c
 set statusline+=%y
