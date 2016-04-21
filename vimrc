@@ -4,10 +4,12 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
+Plug 'junegunn/seoul256.vim'
 Plug 'wincent/command-t'
+
+Plug 'julialang/julia-vim'
 
 call plug#end()
 
@@ -35,17 +37,22 @@ set noswapfile
 set clipboard=unnamed
 
 " colors
-colo solarized
-set background=dark
-
-" leader
-let mapleader=","
+colo seoul256
 
 " avoid escape
 inoremap jj <ESC>
 
+" leader
+let mapleader=","
+
 " file toggle
 nnoremap <silent> <leader><leader> :e#<CR>
+
+" clear searches
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+" reload command-t
+nnoremap <silent> <leader>r :CommandTFlush<CR>
 
 " wrapping
 nnoremap j gj
@@ -59,19 +66,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" clear searches
-nnoremap <silent> <leader>/ :nohlsearch<CR>
-
-" command-t
-nnoremap <silent> <leader>r :CommandTFlush<CR>
-
-" lightline
-let g:lightline = {'colorscheme': 'seoul256',}
-
-" markdown
+" filetypes
 au BufNewFile,BufRead *.txt set filetype=markdown
 
-" arrow keys
+" no arrow keys
 noremap <left> <nop>
 noremap <right> <nop>
 noremap <up> <nop>
@@ -80,3 +78,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" custom status line
+set statusline=
+set statusline+=%m\ %F
+set statusline+=%<
+set statusline+=%=
+set statusline+=buf:%-3n
+set statusline+=col:%-3c
+set statusline+=%y
