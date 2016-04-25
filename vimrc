@@ -4,11 +4,13 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+" core plugins
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ervandew/supertab'
 Plug 'junegunn/seoul256.vim'
 Plug 'wincent/command-t'
 
+" filetypes
 Plug 'julialang/julia-vim'
 
 call plug#end()
@@ -34,6 +36,8 @@ set expandtab
 set laststatus=2
 set nobackup
 set noswapfile
+set noerrorbells
+set clipboard=unnamed
 
 " colors
 colo seoul256
@@ -67,7 +71,7 @@ nnoremap <c-l> <c-w>l
 
 " custom status line
 set statusline=
-set statusline+=%m\ %F
+set statusline+=%m\ %f
 set statusline+=%<
 set statusline+=%=
 set statusline+=buf:%-3n
@@ -75,27 +79,4 @@ set statusline+=col:%-3.c
 set statusline+=%y
 
 " filetypes
-au BufNewFile,BufRead *.txt set filetype=markdown
-
-" no arrow keys
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <up> <nop>
-noremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-
-" custom status line
-set statusline=
-set statusline+=%m\ %F
-set statusline+=%<
-set statusline+=%=
-set statusline+=buf:%-3n
-set statusline+=col:%-3.c
-set statusline+=%y
-
-" guioptions
-set guioptions-=r
-set guifont=Fira\ Mono:h13
+autocmd BufNewFile,BufReadPost *.txt set filetype=markdown
