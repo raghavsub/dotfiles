@@ -4,13 +4,14 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-" core plugins
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ervandew/supertab'
+" core
 Plug 'junegunn/seoul256.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'wincent/command-t'
 
-" filetypes
+" other
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'julialang/julia-vim'
 
 call plug#end()
@@ -18,7 +19,6 @@ call plug#end()
 " general
 filetype plugin indent on
 syntax on
-
 set nocompatible
 set hidden
 set notitle
@@ -40,7 +40,7 @@ set noerrorbells
 set clipboard=unnamed
 
 " colors
-colo seoul256
+colorscheme seoul256
 
 " avoid escape
 inoremap jj <ESC>
@@ -48,7 +48,7 @@ inoremap jj <ESC>
 " leader
 let mapleader=","
 
-" file toggle
+" fast buffer toggle
 nnoremap <silent> <leader><leader> :e#<CR>
 
 " clear searches
@@ -77,6 +77,3 @@ set statusline+=%=
 set statusline+=buf:%-3n
 set statusline+=col:%-3.c
 set statusline+=%y
-
-" filetypes
-autocmd BufNewFile,BufReadPost *.txt set filetype=markdown
