@@ -1,5 +1,5 @@
 " Raghav Subramaniam
-".vimrc
+" .vimrc
 
 " vim-plug
 call plug#begin('~/.vim/plugged')

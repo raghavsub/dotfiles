@@ -27,12 +27,11 @@ setopt histignorespace
 setopt complete_in_word
 
 # editor
-export EDITOR='vim'
+export EDITOR=vim
 
 # aliases
 alias ls="ls -pG"
 alias la="ls -a"
-alias ll="ls -ltr"
 alias clc="clear"
 alias rm="rm -i"
 
