@@ -5,14 +5,11 @@
 call plug#begin('~/.vim/plugged')
 
 " core
-Plug 'junegunn/seoul256.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'wincent/command-t'
-
-" other
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'julialang/julia-vim'
 
 call plug#end()
 
@@ -40,7 +37,8 @@ set noerrorbells
 set clipboard=unnamed
 
 " colors
-colorscheme seoul256
+colorscheme base16-railscasts
+set background=dark
 
 " avoid escape
 inoremap jj <ESC>

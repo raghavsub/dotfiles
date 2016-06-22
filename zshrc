@@ -31,7 +31,7 @@ export EDITOR=vim
 
 # aliases
 alias ls="ls -pG"
-alias la="ls -a"
+alias la="ls -al"
 alias clc="clear"
 alias rm="rm -i"
 
