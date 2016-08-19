@@ -21,14 +21,14 @@ set hidden
 set notitle
 set hlsearch
 set incsearch
-set number
 set ignorecase
 set smartcase
+set number
 set backspace=indent,eol,start
 set autoindent
-set smartindent
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set laststatus=2
 set nobackup

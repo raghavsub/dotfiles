@@ -26,13 +26,9 @@ setopt histignorespace
 # completion
 setopt complete_in_word
 
-# editor
-export EDITOR=vim
-
 # aliases
 alias ls="ls -pG"
 alias la="ls -al"
-alias clc="clear"
 alias rm="rm -i"
 
 # custom prompt
