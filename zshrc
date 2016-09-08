@@ -35,5 +35,8 @@ alias rm="rm -i"
 setopt PROMPT_SUBST
 prompt="%{$fg[cyan]%}[%~]%{$reset_color%} $ "
 
-# z
-. `brew --prefix`/etc/profile.d/z.sh
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# functions
+source ~/fzf_fns.sh
