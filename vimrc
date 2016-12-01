@@ -51,12 +51,14 @@ nnoremap <silent> <leader><leader> :e#<CR>
 " clear searches
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
-" reload command-t
-nnoremap <silent> <leader>r :CommandTFlush<CR>
+" command-t functionality
+nnoremap <silent> <leader>t :FZF<CR>
 
 " wrapping
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " splits
 set splitbelow

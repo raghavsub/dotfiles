@@ -26,6 +26,11 @@ setopt histignorespace
 # completion
 setopt complete_in_word
 
+# vi mode
+bindkey -v
+bindkey jj vi-cmd-mode
+bindkey '^?' backward-delete-char
+
 # aliases
 alias ls="ls -pG"
 alias la="ls -al"
