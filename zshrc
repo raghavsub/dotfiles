@@ -38,7 +38,7 @@ alias rm="rm -i"
 
 # custom prompt
 setopt PROMPT_SUBST
-prompt="%{$fg[cyan]%}[%~]%{$reset_color%} $ "
+prompt="%{$fg[blue]%}[%~]%{$reset_color%} $ "
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
