@@ -4,12 +4,11 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'noahfrederick/vim-noctu'
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -34,10 +33,12 @@ set laststatus=2
 set nobackup
 set noswapfile
 set noerrorbells
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " colors
-colo noctu
+let base16colorspace=256
+colorscheme base16-ocean
+set background=dark
 
 " avoid escape
 inoremap jj <ESC>
@@ -76,3 +77,6 @@ set statusline+=%=
 set statusline+=buf:%-3n
 set statusline+=col:%-3.c
 set statusline+=%y
+
+" filetypes
+autocmd BufNewFile,BufRead *.md,*.txt set filetype=markdown
