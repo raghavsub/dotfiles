@@ -10,8 +10,7 @@ base04 = #a7adba
 base05 = #c0c5ce
 base06 = #dfe1e8
 base07 = #eff1f5
-base08 = #bf616a
-base09 = #d08770
+base08 = #bf616a base09 = #d08770
 base0A = #ebcb8b
 base0B = #a3be8c
 base0C = #96b5b4
@@ -134,7 +133,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
 
 format-full = <label-full>
-label-full = %percentage%%
+label-full =  %percentage%%
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
