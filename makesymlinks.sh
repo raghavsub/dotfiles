@@ -5,6 +5,7 @@ dir=~/dotfiles
 files="bashrc
     config/dunst/dunstrc
     config/i3/config
+    config/i3/lock.sh
     config/i3/polybar
     config/mopidy/mopidy.conf
     config/streamlink/config
