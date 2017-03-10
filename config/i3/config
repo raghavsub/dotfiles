@@ -79,8 +79,7 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace 9 bindsym $mod+0 workspace 10
 
 # reload
 bindsym $mod+Shift+c reload
@@ -135,9 +134,10 @@ assign [class="Firefox"] 1
 assign [class="Slack"] 2
 
 # keybindings
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "80" -font "Roboto 24" -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
+bindsym Print exec scrot
 
 # startup
 exec_always --no-startup-id feh --bg-fill "/home/rs/Dropbox/Wallpapers/ocean.jpg"
@@ -146,3 +146,9 @@ exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3
 exec --no-startup-id compton -f
 exec --no-startup-id dropbox start
 exec --no-startup-id mopidy
+
+# scratchpad
+bindsym $mod+apostrophe scratchpad show
+exec --no-startup-id st -n scratchpad -g 24x8
+for_window [instance="scratchpad"] floating enable
+for_window [instance="scratchpad"] move scratchpad

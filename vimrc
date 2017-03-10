@@ -55,6 +55,9 @@ nnoremap <silent> <leader>/ :nohlsearch<CR>
 " command-t functionality
 nnoremap <silent> <leader>t :FZF<CR>
 
+" toggle goyo
+nnoremap <silent> <leader>g :Goyo<CR>
+
 " wrapping
 nnoremap j gj
 nnoremap k gk
