@@ -134,16 +134,16 @@ assign [class="Firefox"] 1
 assign [class="Slack"] 2
 
 # keybindings
-bindsym $mod+Return exec st
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "80" -font "Roboto 24" -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
+bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -font "Roboto 24" -width 100 -padding 480 -opacity 80 -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
 bindsym Print exec scrot
 
 # startup
 exec_always --no-startup-id feh --bg-fill "/home/rs/Dropbox/Wallpapers/ocean.jpg"
 exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3/polybar"
 
-exec --no-startup-id compton -f
+exec --no-startup-id compton
 exec --no-startup-id dropbox start
 exec --no-startup-id mopidy
 
