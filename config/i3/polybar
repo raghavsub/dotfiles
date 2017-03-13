@@ -10,7 +10,8 @@ base04 = #a7adba
 base05 = #c0c5ce
 base06 = #dfe1e8
 base07 = #eff1f5
-base08 = #bf616a base09 = #d08770
+base08 = #bf616a
+base09 = #d08770
 base0A = #ebcb8b
 base0B = #a3be8c
 base0C = #96b5b4
@@ -101,14 +102,15 @@ label-song-ellipsis = true
 type = internal/date
 label = %date%
 format-prefix = " "
-date = %m/%d/%Y
-interval = 1
+date = %a %b %_d
+interval = 5
 
 [module/time]
 type = internal/date
 label = %time%
 format-prefix = " "
-time = %H:%M:%S
+time = %_I:%M %p
+interval = 5
 
 [module/volume]
 type = internal/volume

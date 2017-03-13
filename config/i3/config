@@ -107,21 +107,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# media controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
 # colors
 #                       border  background text    indicator
 client.focused          $base01 $base01    $base05 $base01
@@ -133,22 +118,33 @@ client.urgent           $base01 $base01    $base03 $base01
 assign [class="Firefox"] 1
 assign [class="Slack"] 2
 
+# function keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPause exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc previous
+bindsym Print exec scrot
+
 # keybindings
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -font "Roboto 24" -width 100 -padding 480 -opacity 80 -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
-bindsym Print exec scrot
 
 # startup
 exec_always --no-startup-id feh --bg-fill "/home/rs/Dropbox/Wallpapers/ocean.jpg"
 exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3/polybar"
 
-exec --no-startup-id compton
+exec --no-startup-id compton -f
 exec --no-startup-id dropbox start
 exec --no-startup-id mopidy
 
 # scratchpad
 bindsym $mod+apostrophe scratchpad show
-exec --no-startup-id st -n scratchpad -g 24x8
+exec --no-startup-id urxvt -name scratchpad -geometry 24x8
 for_window [instance="scratchpad"] floating enable
 for_window [instance="scratchpad"] move scratchpad
