@@ -5,9 +5,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
 call plug#end()
@@ -48,6 +50,20 @@ let mapleader=","
 
 " fast buffer toggle
 nnoremap <silent> <leader><leader> :e#<CR>
+
+" fzf buffer select
+function! s:buflist()
+    redir => ls
+    silent ls
+    redir END
+    return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+    execute 'buffer' matchstr(a:e,'^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader>b :call fzf#run({'source': reverse(<sid>buflist()), 'sink': function('<sid>bufopen'), 'options': '+m', 'down': len(<sid>buflist()) + 2})<CR>
 
 " clear searches
 nnoremap <silent> <leader>/ :nohlsearch<CR>

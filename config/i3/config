@@ -34,9 +34,6 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# lock
-bindsym $mod+Shift+x exec "/home/rs/.config/i3/lock.sh"
-
 # move container
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -49,7 +46,6 @@ bindsym $mod+o split v
 
 # layouts
 bindsym $mod+f fullscreen
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
@@ -136,7 +132,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -font "Roboto 24" -width 100 -padding 480 -opacity 80 -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
 
 # startup
-exec_always --no-startup-id feh --bg-fill "/home/rs/Dropbox/Wallpapers/ocean.jpg"
+exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3/polybar"
 
 exec --no-startup-id compton -f

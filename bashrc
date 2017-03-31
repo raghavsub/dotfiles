@@ -14,7 +14,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # prompt
-PS1='\[\033[01;34m\][\w]\[\033[00m\] $ '
+PS1='\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ '
 
 # color aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -59,3 +59,6 @@ fd()
 
 # miniconda
 export PATH="/home/rs/.miniconda/bin:$PATH"
+
+# pyth
+alias pyth="python3 ~/pyth/pyth.py"

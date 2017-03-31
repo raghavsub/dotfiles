@@ -3,6 +3,7 @@
 dir=~/dotfiles
 
 files="bashrc
+    bash_profile
     config/dunst/dunstrc
     config/i3/config
     config/i3/lock.sh
@@ -10,6 +11,7 @@ files="bashrc
     config/mopidy/mopidy.conf
     config/streamlink/config
     config/zathura/zathurarc
+    tmux.conf
     vimrc
     Xresources"
 
