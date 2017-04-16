@@ -13,7 +13,8 @@ files="bashrc
     config/zathura/zathurarc
     tmux.conf
     vimrc
-    Xresources"
+    xinitrc
+    xserverrc"
 
 for file in $files; do
     echo "Creating symlink to $file in home directory."

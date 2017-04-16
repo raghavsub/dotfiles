@@ -1,8 +1,0 @@
-/* Raghav Subramaniam */
-/* .Xresources */
-
-URxvt*background: #2b303b
-URxvt*font: xft:Hack-Regular:size=12
-URxvt*letterSpace: 0
-URxvt*perl-ext-common: selection-to-clipboard
-URxvt*scrollBar: false
