@@ -59,6 +59,3 @@ fd()
 
 # miniconda
 export PATH="/home/rs/.miniconda/bin:$PATH"
-
-# pyth
-alias pyth="python3 ~/pyth/pyth.py"

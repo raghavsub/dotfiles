@@ -75,7 +75,8 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9 bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # reload
 bindsym $mod+Shift+c reload
@@ -132,7 +133,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -font "Roboto 24" -width 100 -padding 480 -opacity 80 -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
 
 # startup
-exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id feh --bg-fill ~/Dropbox/Wallpapers/ocean.jpg
 exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3/polybar"
 
 exec --no-startup-id compton -f
