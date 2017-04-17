@@ -78,9 +78,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# reload
-bindsym $mod+Shift+c reload
-
 # restart
 bindsym $mod+Shift+r restart
 
