@@ -38,5 +38,5 @@
     foreground = "#c0c5ce"
 
 [urgency_critical]
-    background = "#bf616a"
+    background = "#343d46"
     foreground = "#c0c5ce"

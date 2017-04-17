@@ -4,17 +4,19 @@ dir=~/dotfiles
 
 files="bashrc
     bash_profile
+    config/compton.conf
     config/dunst/dunstrc
     config/i3/config
-    config/i3/lock.sh
-    config/i3/polybar
     config/mopidy/mopidy.conf
+    config/polybar/config
     config/streamlink/config
+    config/termite/config
     config/zathura/zathurarc
     tmux.conf
     vimrc
     xinitrc
-    xserverrc"
+    xserverrc
+    Xresources"
 
 for file in $files; do
     echo "Creating symlink to $file in home directory."

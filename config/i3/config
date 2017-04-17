@@ -84,9 +84,6 @@ bindsym $mod+Shift+c reload
 # restart
 bindsym $mod+Shift+r restart
 
-# exit
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout?' -b 'Yes' 'i3-msg exit'"
-
 # resize
 mode "resize" {
     bindsym h resize shrink width 10 px or 10 ppt
@@ -128,20 +125,19 @@ bindsym XF86AudioPrev exec mpc previous
 bindsym Print exec scrot
 
 # keybindings
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -font "Roboto 24" -width 100 -padding 480 -opacity 80 -bc "$base00" -bg "$base00" -fg "$base05" -hlbg "$base00" -hlfg "$base0A"
+bindsym $mod+d exec rofi -show run
 
 # startup
-exec_always --no-startup-id feh --bg-fill ~/Dropbox/Wallpapers/ocean.jpg
-exec_always --no-startup-id killall polybar; polybar top -c "/home/rs/.config/i3/polybar"
-
-exec --no-startup-id compton -f
+exec --no-startup-id feh --bg-fill wp.jpg
+exec --no-startup-id killall polybar; polybar top
+exec --no-startup-id compton
 exec --no-startup-id dropbox start
 exec --no-startup-id mopidy
 
 # scratchpad
-bindsym $mod+apostrophe scratchpad show
-exec --no-startup-id urxvt -name scratchpad -geometry 24x8
-for_window [instance="scratchpad"] floating enable
-for_window [instance="scratchpad"] move scratchpad
+# bindsym $mod+apostrophe scratchpad show
+# exec --no-startup-id urxvt -name scratchpad -geometry 24x8
+# for_window [instance="scratchpad"] floating enable
+# for_window [instance="scratchpad"] move scratchpad
