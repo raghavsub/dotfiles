@@ -127,12 +127,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # startup
-exec_always --no-startup-id feh --bg-tile ~/Dropbox/Wallpapers/airplane.png
-exec_always --no-startup-id killall polybar; polybar top
-
 exec --no-startup-id compton
-exec --no-startup-id dropbox start
+exec --no-startup-id feh --bg-scale ~/Dropbox/Wallpapers/ocean.jpg
 exec --no-startup-id mopidy
+exec --no-startup-id polybar top
 
 # scratchpad
 bindsym $mod+apostrophe scratchpad show
