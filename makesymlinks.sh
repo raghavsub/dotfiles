@@ -12,6 +12,8 @@ files="bashrc
     config/streamlink/config
     config/termite/config
     config/zathura/zathurarc
+    newsbeuter/config
+    newsbeuter/urls
     tmux.conf
     vimrc
     xinitrc
