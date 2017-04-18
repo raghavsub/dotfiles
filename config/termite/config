@@ -3,3 +3,4 @@
 
 [options]
 font = Hack 12
+mouse_autohide = true
