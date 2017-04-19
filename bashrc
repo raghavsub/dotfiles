@@ -54,4 +54,4 @@ fd()
 }
 
 # miniconda
-export PATH="/home/rs/.miniconda/bin:$PATH"
+export PATH="/home/raghav/.miniconda/bin:$PATH"
