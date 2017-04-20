@@ -8,6 +8,7 @@ files="bashrc
     config/dunst/dunstrc
     config/i3/config
     config/mopidy/mopidy.conf
+    config/ncmpcpp/config
     config/polybar/config
     config/streamlink/config
     config/termite/config
