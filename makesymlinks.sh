@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=~/dotfiles
+dir=~/Dropbox/Workspace/dotfiles
 
 files="bashrc
     bash_profile
@@ -8,7 +8,6 @@ files="bashrc
     config/dunst/dunstrc
     config/i3/config
     config/mopidy/mopidy.conf
-    config/ncmpcpp/config
     config/polybar/config
     config/streamlink/config
     config/termite/config
