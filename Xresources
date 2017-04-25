@@ -9,3 +9,11 @@ rofi.color-window: #343d46, #343d46, #343d46
 rofi.color-normal: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
 rofi.color-active: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
 rofi.color-urgent: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
