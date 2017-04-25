@@ -52,6 +52,3 @@ fd()
     [ $# -eq 0 ] && cd "$(find $HOME -type d | fzf -i)" && return
     cd "$(find $1 -type d | fzf -i)"
 }
-
-# miniconda
-export PATH="/home/raghav/.miniconda/bin:$PATH"
