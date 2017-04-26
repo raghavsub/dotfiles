@@ -11,6 +11,7 @@ files="bashrc
     config/polybar/config
     config/streamlink/config
     config/termite/config
+    config/user-dirs.dirs
     config/zathura/zathurarc
     newsbeuter/config
     newsbeuter/urls

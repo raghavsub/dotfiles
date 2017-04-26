@@ -128,10 +128,16 @@ bindsym Print exec scrot
 # keybindings
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # startup
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale ~/Dropbox/Wallpapers/ocean.jpg
 exec --no-startup-id mopidy
 exec --no-startup-id polybar top
+
+# scratchpad
+bindsym $mod+apostrophe scratchpad show
+exec --no-startup-id termite --geometry=240x120 --name=scratchpad --title=scratchpad &
+for_window [instance="scratchpad"] floating enable
+for_window [instance="scratchpad"] move scratchpad
