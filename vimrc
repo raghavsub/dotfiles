@@ -5,12 +5,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -38,9 +37,9 @@ set noerrorbells
 set clipboard=unnamedplus
 
 " colors
-let base16colorspace=256
-colorscheme base16-ocean
 set background=dark
+let base16colorspace=256
+colorscheme base16-dracula
 
 " avoid escape
 inoremap jj <ESC>
