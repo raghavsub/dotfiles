@@ -81,11 +81,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # colors
-#                       border  background text    indicator
-client.focused          #2c393f #2c393f    #cdd3de #2c393f
-client.focused_inactive #2c393f #2c393f    #707880 #2c393f
-client.unfocused        #2c393f #2c393f    #707880 #2c393f
-client.urgent           #2c393f #2c393f    #707880 #2c393f
+client.focused          #534636 #534636 #d0c8c6 #534636
+client.focused_inactive #534636 #534636 #7e705a #534636
+client.unfocused        #534636 #534636 #7e705a #534636
+client.urgent           #534636 #534636 #7e705a #534636
 
 # default workspaces
 assign [class="Firefox"] 1
@@ -114,7 +113,7 @@ bindsym $mod+d exec rofi -show drun
 
 # startup
 exec --no-startup-id compton
-exec --no-startup-id feh --bg-scale ~/Dropbox/Wallpapers/ocean.jpg
+exec --no-startup-id hsetroot -solid "#3B3228"
 exec --no-startup-id mopidy
 exec --no-startup-id polybar top
 
