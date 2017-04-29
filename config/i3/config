@@ -4,24 +4,6 @@
 # modifier
 set $mod Mod1
 
-# colors
-set $base00 #2b303b
-set $base01 #343d46
-set $base02 #4f5b66
-set $base03 #65737e
-set $base04 #a7adba
-set $base05 #c0c5ce
-set $base06 #dfe1e8
-set $base07 #eff1f5
-set $base08 #bf616a
-set $base09 #d08770
-set $base0A #ebcb8b
-set $base0B #a3be8c
-set $base0C #96b5b4
-set $base0D #8fa1b3
-set $base0E #b48ead
-set $base0F #ab7967
-
 # font
 font pango: Roboto 12
 
@@ -100,10 +82,10 @@ bindsym $mod+r mode "resize"
 
 # colors
 #                       border  background text    indicator
-client.focused          $base01 $base01    $base05 $base01
-client.focused_inactive $base01 $base01    $base03 $base01
-client.unfocused        $base01 $base01    $base03 $base01
-client.urgent           $base01 $base01    $base03 $base01
+client.focused          #2c393f #2c393f    #cdd3de #2c393f
+client.focused_inactive #2c393f #2c393f    #707880 #2c393f
+client.unfocused        #2c393f #2c393f    #707880 #2c393f
+client.urgent           #2c393f #2c393f    #707880 #2c393f
 
 # default workspaces
 assign [class="Firefox"] 1

@@ -5,11 +5,10 @@ rofi.modi: drun
 rofi.font: Roboto 24
 rofi.lines: 4
 rofi.color-enabled: true
-rofi.color-window: #343d46, #343d46, #343d46
-rofi.color-normal: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
-rofi.color-active: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
-rofi.color-urgent: #343d46, #c0c5ce, #343d46, #343d46, #ebcb8b
-
+rofi.color-window: #2c393f, #2c393f, #2c393f
+rofi.color-normal: #2c393f, #cdd3de, #2c393f, #2c393f, #ffcc00
+rofi.color-active: #2c393f, #cdd3de, #2c393f, #2c393f, #ffcc00
+rofi.color-urgent: #2c393f, #cdd3de, #2c393f, #2c393f, #ffcc00
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
