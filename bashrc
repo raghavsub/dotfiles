@@ -27,9 +27,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # ls aliases
-alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF'
+
+# cd aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # enable completion
 if ! shopt -oq posix; then

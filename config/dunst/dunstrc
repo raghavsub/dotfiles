@@ -30,13 +30,13 @@
     close_all = ctrl+shift+space
 
 [urgency_low]
-    background = "#534636"
-    foreground = "#d0c8c6"
+    background = "#3c3836"
+    foreground = "#d5c4a1"
 
 [urgency_normal]
-    background = "#534636"
-    foreground = "#d0c8c6"
+    background = "#3c3836"
+    foreground = "#d5c4a1"
 
 [urgency_critical]
-    background = "#534636"
-    foreground = "#d0c8c6"
+    background = "#3c3836"
+    foreground = "#d5c4a1"
