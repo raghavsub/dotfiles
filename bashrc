@@ -14,29 +14,29 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # prompt
-PS1='\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ '
+PS1="\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ "
 
 # color aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls="ls --color=auto"
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep="grep --color=auto"
+    alias fgrep="fgrep --color=auto"
+    alias egrep="egrep --color=auto"
 fi
 
 # ls aliases
-alias la='ls -A'
-alias ll='ls -alF'
+alias la="ls -A"
+alias ll="ls -alF"
 
 # cd aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # xdg aliases
-alias open=xdg-open
+alias open="xdg-open &>/dev/null"
 
 # enable completion
 if ! shopt -oq posix; then

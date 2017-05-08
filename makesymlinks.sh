@@ -9,10 +9,8 @@ files="bashrc
     config/i3/config
     config/mopidy/mopidy.conf
     config/polybar/config
-    config/streamlink/config
     config/termite/config
     config/user-dirs.dirs
-    config/zathura/zathurarc
     newsbeuter/config
     newsbeuter/urls
     tmux.conf

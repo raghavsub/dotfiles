@@ -1,5 +1,0 @@
-# Raghav Subramaniam
-# .config/streamlink/config
-
-player=mpv --cache 2048
-player-no-close
