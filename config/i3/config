@@ -115,7 +115,8 @@ bindsym $mod+d exec rofi -show drun
 exec --no-startup-id compton
 exec --no-startup-id hsetroot -solid "#32302f"
 exec --no-startup-id mopidy
-exec --no-startup-id killall polybar; polybar top
+exec --no-startup-id polybar top
+exec --no-startup-id xss-lock -- slock
 
 # scratchpad
 bindsym $mod+apostrophe scratchpad show
