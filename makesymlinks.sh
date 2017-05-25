@@ -8,11 +8,11 @@ files="bashrc
     config/dunst/dunstrc
     config/i3/config
     config/mopidy/mopidy.conf
+    config/newsbeuter/config
+    config/newsbeuter/urls
     config/polybar/config
     config/termite/config
     config/user-dirs.dirs
-    newsbeuter/config
-    newsbeuter/urls
     tmux.conf
     vimrc
     xinitrc

@@ -2,6 +2,6 @@
 # .config/termite/config
 
 [options]
-font = Hack 11
+font = Hack 13
 mouse_autohide = true
 scrollback_lines = 10000

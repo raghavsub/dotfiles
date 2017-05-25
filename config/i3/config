@@ -109,7 +109,7 @@ bindsym Print exec scrot
 # keybindings
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show run
 
 # startup
 exec --no-startup-id compton
@@ -117,9 +117,3 @@ exec --no-startup-id hsetroot -solid "#32302f"
 exec --no-startup-id mopidy
 exec --no-startup-id polybar top
 exec --no-startup-id xss-lock -- slock
-
-# scratchpad
-bindsym $mod+apostrophe scratchpad show
-exec --no-startup-id termite --geometry=240x120 --name=scratchpad --title=scratchpad &
-for_window [instance="scratchpad"] floating enable
-for_window [instance="scratchpad"] move scratchpad
