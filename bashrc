@@ -59,3 +59,7 @@ fd()
     [ $# -eq 0 ] && cd "$(find $HOME -type d | fzf -i)" && return
     cd "$(find $1 -type d | fzf -i)"
 }
+
+# other aliases
+alias work="TERM=xterm-256color ssh -Y -D 7000 -p 7022 raghav@services.safely-you.com"
+alias serve="python -m SimpleHTTPServer 8000"
