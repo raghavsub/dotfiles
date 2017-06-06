@@ -60,8 +60,8 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# restart
-bindsym $mod+Shift+r restart
+# reload
+bindsym $mod+Shift+r reload
 
 # resize
 mode "resize" {
@@ -104,7 +104,7 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPause exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc previous
-bindsym Print exec scrot
+bindsym --release Print exec --no-startup-id scrot
 
 # keybindings
 bindsym $mod+Return exec termite

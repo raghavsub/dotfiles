@@ -13,7 +13,6 @@ files="bashrc
     config/polybar/config
     config/termite/config
     config/user-dirs.dirs
-    tmux.conf
     vimrc
     xinitrc
     xserverrc
