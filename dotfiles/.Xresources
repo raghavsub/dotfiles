@@ -1,7 +1,7 @@
 ! Raghav Subramaniam
 ! .Xresources
 
-rofi.modi: drun
+rofi.modi: run
 rofi.font: Roboto 24
 rofi.lines: 4
 rofi.color-enabled: true
