@@ -81,10 +81,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # colors
-client.focused          #3c3836 #3c3836 #d5c4a1 #3c3836
-client.focused_inactive #3c3836 #3c3836 #665c54 #3c3836
-client.unfocused        #3c3836 #3c3836 #665c54 #3c3836
-client.urgent           #3c3836 #3c3836 #665c54 #3c3836
+client.focused          #{{base01}} #{{base01}} #{{base05}} #{{base01}}
+client.focused_inactive #{{base01}} #{{base01}} #{{base03}} #{{base01}}
+client.unfocused        #{{base01}} #{{base01}} #{{base03}} #{{base01}}
+client.urgent           #{{base01}} #{{base01}} #{{base03}} #{{base01}}
 
 # default workspaces
 assign [class="Firefox"] 1
@@ -113,7 +113,7 @@ bindsym $mod+d exec rofi -show run
 
 # startup
 exec --no-startup-id compton
-exec --no-startup-id hsetroot -solid "#32302f"
+exec --no-startup-id hsetroot -solid "#{{base00}}"
 exec --no-startup-id mopidy
 exec --no-startup-id polybar top
 exec --no-startup-id xss-lock -- slock

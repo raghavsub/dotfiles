@@ -7,6 +7,10 @@ case $- in
       *) return;;
 esac
 
+# editor
+export EDITOR=vim
+export VISUAL=vim
+
 # history
 HISTCONTROL=ignoreboth
 shopt -s histappend
@@ -28,14 +32,14 @@ fi
 
 # ls aliases
 alias la="ls -A"
-alias ll="ls -alF"
+alias ll="ls -AFl"
 
 # cd aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# xdg aliases
+# xdg alias
 alias open="xdg-open &>/dev/null"
 
 # enable completion
