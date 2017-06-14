@@ -9,10 +9,3 @@ rofi.color-window: #{{base01}}, #{{base01}}, #{{base01}}
 rofi.color-normal: #{{base01}}, #{{base05}}, #{{base01}}, #{{base01}}, #{{base0A}}
 rofi.color-active: #{{base01}}, #{{base05}}, #{{base01}}, #{{base01}}, #{{base0A}}
 rofi.color-urgent: #{{base01}}, #{{base05}}, #{{base01}}, #{{base01}}, #{{base0A}}
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
