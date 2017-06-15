@@ -5,8 +5,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -40,7 +40,7 @@ set clipboard=unnamedplus
 " colors
 set background=dark
 let base16colorspace=256
-colorscheme base16-dracula
+colorscheme base16-gruvbox-dark-soft
 
 " avoid escape
 inoremap jj <ESC>
@@ -51,25 +51,14 @@ let mapleader=","
 " fast buffer toggle
 nnoremap <silent> <leader><leader> :e#<CR>
 
-" fzf buffer select
-function! s:buflist()
-    redir => ls
-    silent ls
-    redir END
-    return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-    execute 'buffer' matchstr(a:e,'^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader>b :call fzf#run({'source': reverse(<sid>buflist()), 'sink': function('<sid>bufopen'), 'options': '+m', 'down': len(<sid>buflist()) + 2})<CR>
-
 " clear searches
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " command-t functionality
-nnoremap <silent> <leader>t :FZF<CR>
+nnoremap <silent> <leader>t :Files<CR>
+
+" fuzzy buffer search
+nnoremap <silent> <leader>b :Buffers<CR>
 
 " toggle goyo
 nnoremap <silent> <leader>g :Goyo<CR>
