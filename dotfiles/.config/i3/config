@@ -93,7 +93,7 @@ assign [class="Slack"] 2
 # floating windows
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Lxappearance"] floating enable
-for_window [class="Qtpass"] floating enable
+for_window [class="Gtkpass"] floating enable
 
 # function keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%

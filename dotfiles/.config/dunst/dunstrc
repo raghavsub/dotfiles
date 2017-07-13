@@ -38,5 +38,5 @@
     foreground = "#{{base05}}"
 
 [urgency_critical]
-    background = "#{{base01}}"
+    background = "#{{base08}}"
     foreground = "#{{base05}}"
