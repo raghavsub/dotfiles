@@ -60,9 +60,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# reload
-bindsym $mod+Shift+r reload
-
 # resize
 mode "resize" {
     bindsym h resize shrink width 10 px or 10 ppt
@@ -116,5 +113,8 @@ bindsym $mod+d exec rofi -show run
 exec --no-startup-id compton
 exec --no-startup-id hsetroot -solid "#{{base00}}"
 exec --no-startup-id mopidy
-exec --no-startup-id polybar top
 exec --no-startup-id xss-lock -- slock
+
+# xrandr/polybar script
+exec --no-startup-id $HOME/.config/reload.sh
+bindsym $mod+Shift+r exec --no-startup-id $HOME/.config/reload.sh

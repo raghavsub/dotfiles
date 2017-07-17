@@ -8,8 +8,9 @@ screenchange-reload = true
 margin-top = 0
 margin-bottom = 0
 
-[bar/top]
-enable-ipc = true
+[bar/main]
+monitor = eDP1
+
 width = 100%
 height = 24
 
@@ -32,12 +33,30 @@ modules-left = mpd
 modules-center = i3
 modules-right = wifi battery volume date time
 
-tray-position = 
+[bar/ext]
+monitor = DP1
 
-wm-restack = i3
+width = 100%
+height = 24
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+background = #{{base00}}
+foreground = #{{base05}}
+
+underline-size = 1
+overline-size = 1
+
+spacing = 0
+padding-left = 2
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Roboto:pixelsize=12;2
+font-1 = FontAwesome:pixelsize=12;2
+
+modules-left = mpd
+modules-center = i3
+modules-right = wifi battery volume date time
 
 [module/i3]
 type = internal/i3

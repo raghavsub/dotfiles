@@ -4,6 +4,7 @@
 rofi.modi: run
 rofi.font: Roboto 24
 rofi.lines: 4
+rofi.m: -4
 rofi.color-enabled: true
 rofi.color-window: #{{base01}}, #{{base01}}, #{{base01}}
 rofi.color-normal: #{{base01}}, #{{base05}}, #{{base01}}, #{{base01}}, #{{base0A}}
