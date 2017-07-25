@@ -66,4 +66,3 @@ fd()
 
 # other aliases
 alias work="TERM=xterm-256color ssh -Y -D 7000 -p 7022 raghav@services.safely-you.com"
-alias serve="python -m SimpleHTTPServer 7001"

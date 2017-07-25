@@ -5,6 +5,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -35,7 +36,6 @@ set laststatus=2
 set nobackup
 set noswapfile
 set noerrorbells
-set clipboard=unnamedplus
 
 " colors
 set background=dark
