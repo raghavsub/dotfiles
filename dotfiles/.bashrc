@@ -7,6 +7,10 @@ case $- in
       *) return;;
 esac
 
+# vi mode
+set -o vi
+bind '"jj":vi-movement-mode'
+
 # editor
 export EDITOR=vim
 export VISUAL=vim
@@ -39,9 +43,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# xdg alias
-alias open="xdg-open &>/dev/null"
-
 # enable completion
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -65,4 +66,5 @@ fd()
 }
 
 # other aliases
-alias work="TERM=xterm-256color ssh -Y -D 7000 -p 7022 raghav@services.safely-you.com"
+alias training="TERM=xterm-256color ssh -Y -D 7000 -p 7022 raghav@services.safely-you.com"
+alias deploy="TERM=xterm-256color ssh raghav@208.123.120.4"
