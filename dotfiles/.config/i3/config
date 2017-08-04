@@ -109,6 +109,7 @@ bindsym --release Print exec --no-startup-id scrot
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
+bindsym $mod+backslash exec gtkpass
 
 # startup
 exec --no-startup-id compton
