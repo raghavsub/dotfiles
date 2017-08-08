@@ -96,7 +96,7 @@ label-visible-padding = 2
 type=internal/mpd
 
 label-song =  %artist% - %title%
-label-song-maxlen = 120
+label-song-maxlen = 100
 label-song-ellipsis = true
 
 [module/date]
