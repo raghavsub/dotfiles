@@ -65,6 +65,6 @@ fd()
     cd "$(find $1 -type d | fzf -i)"
 }
 
-# other aliases
+# machine-specific
 alias training="TERM=xterm-256color ssh -Y -D 7000 -p 7022 raghav@services.safely-you.com"
 alias deploy="TERM=xterm-256color ssh raghav@208.123.120.4"
