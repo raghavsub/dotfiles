@@ -5,7 +5,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -63,19 +62,11 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " toggle goyo
 nnoremap <silent> <leader>g :Goyo<CR>
 
-" wrapping
+" jk macros
 nnoremap j gj
 nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-
-" splits
-set splitbelow
-set splitright
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+nnoremap gj j
+nnoremap gk k
 
 " custom status line
 set statusline=
@@ -85,6 +76,3 @@ set statusline+=%=
 set statusline+=buf:%-3n
 set statusline+=col:%-3.c
 set statusline+=%y
-
-" filetypes
-autocmd BufNewFile,BufRead *.md,*.txt set filetype=markdown
