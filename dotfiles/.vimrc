@@ -9,6 +9,7 @@ Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
@@ -39,7 +40,7 @@ set noerrorbells
 " colors
 set background=dark
 let base16colorspace=256
-colorscheme base16-gruvbox-dark-soft
+colorscheme base16-onedark
 
 " avoid escape
 inoremap jj <ESC>
