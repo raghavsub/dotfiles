@@ -43,6 +43,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# xdg-open alias
+alias open="xdg-open &> /dev/null"
+
 # enable completion
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then

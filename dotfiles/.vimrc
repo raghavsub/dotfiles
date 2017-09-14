@@ -40,7 +40,7 @@ set noerrorbells
 " colors
 set background=dark
 let base16colorspace=256
-colorscheme base16-onedark
+colorscheme base16-gruvbox-dark-soft
 
 " avoid escape
 inoremap jj <ESC>
