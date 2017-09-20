@@ -18,6 +18,8 @@
     co = checkout
     cob = checkout -b
 
+    unstage = reset HEAD
+
     la = "!git config -l | grep alias | cut -c 7-"
 
 [color]
