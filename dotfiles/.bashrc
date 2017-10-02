@@ -43,7 +43,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# xdg-open alias
+# other aliases
 alias open="xdg-open &> /dev/null"
 
 # enable completion
@@ -61,12 +61,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-fd()
-{
-    [ $# -eq 0 ] && cd "$(find $HOME -type d | fzf -i)" && return
-    cd "$(find $1 -type d | fzf -i)"
-}
 
 # ruby
 if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
