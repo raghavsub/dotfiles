@@ -59,9 +59,6 @@ nnoremap <silent> <leader>t :Files<CR>
 " fuzzy buffer search
 nnoremap <silent> <leader>b :Buffers<CR>
 
-" toggle goyo
-nnoremap <silent> <leader>g :Goyo<CR>
-
 " jk macros
 nnoremap j gj
 nnoremap k gk
