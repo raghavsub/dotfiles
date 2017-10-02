@@ -1,3 +1,5 @@
+[core]
+    excludesfile = "~/.gitignore_global"
 [alias] 
     l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 
@@ -30,3 +32,4 @@
 [user]
     name = Raghav Subramaniam
     email = raghavs511@gmail.com
+
