@@ -59,6 +59,9 @@ nnoremap <silent> <leader>t :Files<CR>
 " fuzzy buffer search
 nnoremap <silent> <leader>b :Buffers<CR>
 
+" tags
+set tags=tags;
+
 " jk macros
 nnoremap j gj
 nnoremap k gk
