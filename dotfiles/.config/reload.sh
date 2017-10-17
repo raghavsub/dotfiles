@@ -8,7 +8,7 @@ polybar main &
 
 if (xrandr | grep "DP-1 connected" > /dev/null)
 then
-    xrandr --output "DP-1" --auto --left-of eDP1
+    xrandr --output "DP-1" --auto --right-of "eDP-1"
     polybar ext &
 else
     xrandr --output "DP-1" --off
