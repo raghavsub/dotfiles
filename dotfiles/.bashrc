@@ -43,9 +43,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# other aliases
-alias open="xdg-open &> /dev/null"
-
 # enable completion
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -66,3 +63,10 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
   export PATH="$PATH:$HOME/.gem/ruby/2.4.0/bin"
 fi
+
+# custom bash functions
+conncheck() {
+    if [[ $# -ge 1 ]]; then
+        ping -c 1 $1 && notify-send "Connected" "$1"
+    fi
+}
