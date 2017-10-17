@@ -15,7 +15,7 @@
     dc = diff --cached
     dsc = diff --stat --cached
     
-    s = status -s
+    s = status
 
     co = checkout
     cob = checkout -b
