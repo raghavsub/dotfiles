@@ -19,9 +19,6 @@
 
     show_indicators = no
 
-    dmenu = /usr/bin/rofi -dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
-
 [frame]
     width = 0
 
