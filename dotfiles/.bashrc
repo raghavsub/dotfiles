@@ -23,6 +23,9 @@ HISTFILESIZE=2000
 
 # prompt
 PS1="\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ "
+case "$TERM" in
+    xterm*) PS1="\[\e]0;\u@\h:\w\a\]$PS1"
+esac
 
 # color aliases
 if [ -x /usr/bin/dircolors ]; then
