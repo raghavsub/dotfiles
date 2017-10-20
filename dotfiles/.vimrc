@@ -6,11 +6,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf.vim' " :Buffers, :Files, :Tags
+Plug 'tpope/vim-commentary' " gc
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-rhubarb' " :Gbrowse
+Plug 'tpope/vim-surround' " ys, cs, ds
+Plug 'tpope/vim-unimpaired' "[q, ]q
 
 call plug#end()
 
@@ -42,22 +44,21 @@ let base16colorspace=256
 colorscheme base16-gruvbox-dark-soft
 
 " avoid escape
-inoremap jj <ESC>
+imap jj <ESC>
 
 " leader
 let mapleader=","
 
 " fast buffer toggle
-nnoremap <silent> <leader><leader> :e#<CR>
+nmap <leader><leader> :e#<CR>
 
 " clear searches
-nnoremap <silent> <leader>/ :nohlsearch<CR>
+nmap <leader>/ :nohlsearch<CR>
 
-" command-t functionality
-nnoremap <silent> <leader>t :Files<CR>
-
-" fuzzy buffer search
-nnoremap <silent> <leader>b :Buffers<CR>
+" fzf.vim
+nmap ; :Buffers<CR>
+nmap <leader>t :Files<CR>
+nmap <leader>r :Tags<CR>
 
 " tags
 set tags=tags;
