@@ -1,7 +1,6 @@
 # Raghav Subramaniam
 # .bashrc
 
-# do nothing interactively
 case $- in
     *i*) ;;
       *) return;;
