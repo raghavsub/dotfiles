@@ -60,8 +60,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # ruby
 if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
