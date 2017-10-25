@@ -63,6 +63,11 @@ nmap <leader>r :Tags<CR>
 " tags
 set tags=tags;
 
+" use ag if available
+if executable('ag')
+    set grepprg=ag\ --vimscript
+endif
+
 " jk macros
 nnoremap j gj
 nnoremap k gk
