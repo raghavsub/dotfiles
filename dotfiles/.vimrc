@@ -65,7 +65,7 @@ set tags=tags;
 
 " use ag if available
 if executable('ag')
-    set grepprg=ag\ --vimscript
+    set grepprg=ag\ --vimgrep
 endif
 
 " jk macros
