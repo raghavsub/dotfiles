@@ -8,9 +8,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " :Buffers, :Files, :Tags
 Plug 'tpope/vim-commentary' " gc
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb' " :Gbrowse
 Plug 'tpope/vim-surround' " ys, cs, ds
 Plug 'tpope/vim-unimpaired' "[q, ]q
 
