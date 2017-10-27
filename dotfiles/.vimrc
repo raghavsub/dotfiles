@@ -63,6 +63,11 @@ nmap <leader>r :Tags<CR>
 " tags
 set tags=tags;
 
+" ag macro
+if executable("ag")
+    command! -nargs=+ Ag cexpr system("ag --vimgrep " . <q-args>)
+endif
+
 " jk macros
 nnoremap j gj
 nnoremap k gk
