@@ -6,11 +6,9 @@ font = Hack 13
 mouse_autohide = true
 scrollback_lines = 10000
 
+[colors]
 foreground = #{{base05}}
-foreground_bold = #{{base06}}
-cursor = #{{base06}}
 background = #{{base00}}
-
 color0 = #{{base00}}
 color1 = #{{base08}}
 color2 = #{{base0B}}
