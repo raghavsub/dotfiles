@@ -6,10 +6,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
-Plug 'tpope/vim-commentary' " gc
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround' " ys, cs, ds
-Plug 'tpope/vim-unimpaired' "[q, ]q
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
