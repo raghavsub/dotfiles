@@ -4,9 +4,9 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
 Plug 'raghavsub/vim-agate'
+Plug 'raghavsub/vim-legal'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -37,14 +37,13 @@ set noswapfile
 set noerrorbells
 
 " colors
-let base16colorspace=256
-colorscheme base16-default-dark
+colorscheme legal
 
 " avoid escape
 imap jj <ESC>
 
 " leader
-let mapleader=","
+let mapleader=" "
 
 " fast buffer toggle
 nmap <leader><leader> :e#<CR>
