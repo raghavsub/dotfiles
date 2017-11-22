@@ -4,8 +4,14 @@
 [core]
     excludesfile = "~/.gitignore_global"
 
+[log]
+    date = short
+
+[format]
+    pretty = format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s"
+
 [alias] 
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    l = log
 
     a = add
     aa = add -A
@@ -16,8 +22,6 @@
     
     d = diff
     ds = diff --stat
-    dc = diff --cached
-    dsc = diff --stat --cached
     
     s = status
 
@@ -27,8 +31,6 @@
     br = branch
 
     unstage = reset HEAD
-
-    la = "!git config -l | grep alias | cut -c 7-"
 
 [color]
     ui = true
