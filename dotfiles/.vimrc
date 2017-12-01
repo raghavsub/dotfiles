@@ -4,7 +4,7 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
+Plug '~/.fzf'
 Plug 'raghavsub/vim-agate'
 Plug 'raghavsub/vim-legal'
 Plug 'tpope/vim-commentary'
