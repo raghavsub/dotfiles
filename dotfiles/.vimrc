@@ -15,8 +15,6 @@ Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 " general
-filetype plugin indent on
-syntax on
 set nocompatible
 set hidden
 set notitle
