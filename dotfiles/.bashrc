@@ -61,10 +61,3 @@ fi
 if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
   export PATH="$PATH:$HOME/.gem/ruby/2.4.0/bin"
 fi
-
-# custom bash functions
-conncheck() {
-    if [[ $# -ge 1 ]]; then
-        ping -c 1 $1 && notify-send "Connected" "$1"
-    fi
-}

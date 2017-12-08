@@ -54,6 +54,7 @@ nmap <leader>t :FZF<CR>
 
 " ctags
 set tags=tags;
+inoremap <c-x><c-]> <c-]>
 
 " jk macros
 nnoremap j gj
