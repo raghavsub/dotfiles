@@ -4,25 +4,25 @@
 
 main()
 {
-    if [[ ! -f "$HOME/.vim/autoload/plug.vim" ]] ; then
+    if [[ ! -f "$HOME"/.vim/autoload/plug.vim ]] ; then
         echo "Installing vim-plug..."
-        curl -fLo "$HOME/.vim/autoload/plug.vim --create-dirs" \
+        curl -fLo "$HOME"/.vim/autoload/plug.vim --create-dirs \
             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
 
-    if [[ ! -d "$HOME/.fzf" ]] ; then 
+    if [[ ! -d "$HOME"/.fzf ]] ; then 
         echo "Installing fzf..."
-        git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
-        "$HOME/.fzf/install"
+        git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME"/.fzf
+        "$HOME"/.fzf/install --all
     fi
 
     echo "Copying dotfiles..."
-    cp "$PWD/dotfiles/.bashrc" "$HOME"
-    cp "$PWD/dotfiles/.bash_profile" "$HOME"
-    cp "$PWD/dotfiles/.vimrc" "$HOME"
-    cp "$PWD/dotfiles/.tmux.conf" "$HOME"
-    cp "$PWD/dotfiles/.gitconfig" "$HOME"
-    cp "$PWD/dotfiles/.gitignore_global" "$HOME"
+    cp "$PWD"/dotfiles/.bashrc "$HOME"
+    cp "$PWD"/dotfiles/.bash_profile "$HOME"
+    cp "$PWD"/dotfiles/.vimrc "$HOME"
+    cp "$PWD"/dotfiles/.tmux.conf "$HOME"
+    cp "$PWD"/dotfiles/.gitconfig "$HOME"
+    cp "$PWD"/dotfiles/.gitignore_global "$HOME"
 }
 
 main
