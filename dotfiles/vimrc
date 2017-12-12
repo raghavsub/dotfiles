@@ -2,15 +2,8 @@
 " .vimrc
 
 " vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'raghavsub/vim-agate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -39,6 +32,7 @@ set laststatus=2
 set nobackup
 set noswapfile
 set noerrorbells
+set wildmenu
 
 " colors
 let g:hybrid_custom_term_colors = 1
