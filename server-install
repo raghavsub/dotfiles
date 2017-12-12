@@ -1,6 +1,6 @@
 # /usr/bin/env bash
 #
-# Set up a development environment
+# Set up a development environment on a server
 
 main()
 {
@@ -17,10 +17,12 @@ main()
     fi
     
     echo "Symlinking dotfiles..."
-    cd dotfiles
-    find -type f | sed "s/^\.\///" | while read line; do
-        ln -s "$PWD"/"$line" "$HOME"/."$line"
-    done
+    ln -s "$PWD"/dotfiles/bashrc "$HOME"/.bashrc
+    ln -s "$PWD"/dotfiles/bash_profile "$HOME"/.bash_profile
+    ln -s "$PWD"/dotfiles/vimrc "$HOME"/.vimrc
+    ln -s "$PWD"/dotfiles/tmux.conf "$HOME"/.tmux.conf
+    ln -s "$PWD"/dotfiles/gitconfig "$HOME"/.gitconfig
+    ln -s "$PWD"/dotfiles/gitignore_global "$HOME"/.gitignore_global
 }
 
 main

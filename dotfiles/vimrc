@@ -62,10 +62,4 @@ nnoremap gj j
 nnoremap gk k
 
 " custom status line
-set statusline=
-set statusline+=%m\ %f
-set statusline+=%<
-set statusline+=%=
-set statusline+=buf:%-3n
-set statusline+=col:%-3.c
-set statusline+=%y
+set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
