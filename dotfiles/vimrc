@@ -51,9 +51,6 @@ nmap <leader><leader> :e#<CR>
 " clear searches
 nmap <leader>/ :nohlsearch<CR>
 
-" FZF
-nmap <leader>t :FZF<CR>
-
 " ctags
 set tags=tags;
 imap <c-x><c-]> <c-]>
