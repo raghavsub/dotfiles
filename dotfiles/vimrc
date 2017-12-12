@@ -4,13 +4,12 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug '~/.fzf'
 Plug 'raghavsub/vim-agate'
-Plug 'raghavsub/vim-legal'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'w0ng/vim-hybrid'
 
 call plug#end()
 
@@ -33,9 +32,11 @@ set laststatus=2
 set nobackup
 set noswapfile
 set noerrorbells
+set wildmenu
 
 " colors
-colorscheme legal
+set background=dark
+colorscheme hybrid
 
 " avoid escape
 imap jj <ESC>
@@ -49,12 +50,9 @@ nmap <leader><leader> :e#<CR>
 " clear searches
 nmap <leader>/ :nohlsearch<CR>
 
-" FZF
-nmap <leader>t :FZF<CR>
-
 " ctags
 set tags=tags;
-inoremap <c-x><c-]> <c-]>
+imap <c-x><c-]> <c-]>
 
 " jk macros
 nnoremap j gj

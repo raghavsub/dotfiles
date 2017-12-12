@@ -5,5 +5,5 @@
 index-servers = pypi
 
 [pypi]
-username = USERNAME
-password = PASSWORD
+username = REDACTED
+password = REDACTED

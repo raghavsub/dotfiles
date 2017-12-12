@@ -1,6 +1,6 @@
-#! /usr/bin/env bash
+# /usr/bin/env bash
 #
-# Set up a portable development environment on a server
+# Set up a development environment
 
 main()
 {
@@ -15,14 +15,12 @@ main()
         git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME"/.fzf
         "$HOME"/.fzf/install --all
     fi
-
-    echo "Copying dotfiles..."
-    cp "$PWD"/dotfiles/.bashrc "$HOME"
-    cp "$PWD"/dotfiles/.bash_profile "$HOME"
-    cp "$PWD"/dotfiles/.vimrc "$HOME"
-    cp "$PWD"/dotfiles/.tmux.conf "$HOME"
-    cp "$PWD"/dotfiles/.gitconfig "$HOME"
-    cp "$PWD"/dotfiles/.gitignore_global "$HOME"
+    
+    echo "Symlinking dotfiles..."
+    cd dotfiles
+    find -type f | sed "s/^\.\///" | while read line; do
+        ln -s "$PWD"/"$line" "$HOME"/."$line"
+    done
 }
 
 main
