@@ -6,7 +6,8 @@ main()
 {
     cd dotfiles
     find -type f | sed "s/^\.\///" | while read line; do
-        ln -s "$PWD"/"$line" "$HOME"/."$line"
+        echo "Copying "$line"..."
+        cp "$PWD"/"$line" "$HOME"/."$line"
     done
 }
 
