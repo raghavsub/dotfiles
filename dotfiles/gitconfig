@@ -11,7 +11,8 @@
     pretty = format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s"
 
 [alias] 
-    l = log
+    l = log -n 20
+    ll = log
 
     a = add
     aa = add -A
