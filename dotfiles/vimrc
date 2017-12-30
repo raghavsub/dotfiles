@@ -4,7 +4,6 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'raghavsub/vim-agate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -58,6 +57,10 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+
+" ag
+set grepprg=ag\ --vimgrep
+command -nargs=* Ag grep <args>
 
 " custom status line
 set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
