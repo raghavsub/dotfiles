@@ -4,6 +4,7 @@
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug '~/.fzf'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -48,6 +49,9 @@ nmap <leader><leader> :e#<CR>
 
 " clear searches
 nmap <leader>/ :nohlsearch<CR>
+
+" FZF
+nmap <leader>t :FZF<CR>
 
 " ctags
 set tags=tags;
