@@ -39,7 +39,7 @@ set background=dark
 colorscheme hybrid
 
 " avoid escape
-imap jj <ESC>
+inoremap jj <ESC>
 
 " jk macros
 nnoremap j gj
@@ -51,13 +51,13 @@ nnoremap gk k
 let mapleader=" "
 
 " fast buffer toggle
-nmap <leader><leader> :e#<CR>
+nnoremap <space><space> :e#<CR>
 
 " clear searches
-nmap <leader>/ :nohlsearch<CR>
+nnoremap <space>/ :nohlsearch<CR>
 
 " FZF
-nmap <leader>t :FZF<CR>
+nnoremap <space>t :FZF<CR>
 
 " ctags
 set tags=tags;
