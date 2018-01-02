@@ -2,20 +2,9 @@
 " .vimrc
 
 " vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -65,9 +54,6 @@ nnoremap <space><space> :e#<CR>
 
 " clear searches
 nnoremap <space>/ :nohlsearch<CR>
-
-" FZF
-nnoremap <space>t :Files<CR>
 
 " ctags
 set tags=tags;
