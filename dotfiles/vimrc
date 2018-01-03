@@ -1,21 +1,10 @@
 " Raghav Subramaniam
 " .vimrc
 
-" vim-plug
-call plug#begin('~/.vim/plugged')
+" colors
+colorscheme apprentice
 
-Plug 'airblade/vim-gitgutter'
-Plug 'raghavsub/vim-agate'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'w0ng/vim-hybrid'
-
-call plug#end()
-
-" general
+" general settings
 set hlsearch
 set incsearch
 set ignorecase
@@ -35,18 +24,34 @@ set noerrorbells
 set noswapfile
 set notitle
 
-" colors
-set background=dark
-let g:hybrid_custom_term_colors=1
-colorscheme hybrid
+" minpac setup
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" ctags
+" color plugin
+call minpac#add('romainl/apprentice')
+
+" general plugins
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
+
+" ag plugin
+call minpac#add('raghavsub/vim-agate')
+
+" git plugins
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('tpope/vim-fugitive')
+
+" ctags setup
 set tags=tags;
 
-" custom status line
+" status line
 set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 
-" avoid escape
+" easy escape
 inoremap jj <ESC>
 
 " jk macros
