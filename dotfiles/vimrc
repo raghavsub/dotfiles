@@ -23,8 +23,7 @@ set smartcase
 set autoindent
 set expandtab
 set shiftwidth=4
-set softtabstop=4
-set autoread
+set softtabstop=4 set autoread
 set backspace=2
 set hidden
 set laststatus=2
@@ -34,6 +33,11 @@ set nobackup
 set noerrorbells
 set noswapfile
 set notitle
+
+" colors
+set background=dark
+let g:hybrid_custom_term_colors=1
+colorscheme hybrid
 
 " ctags
 set tags=tags;
@@ -55,7 +59,3 @@ nnoremap <space><space> :e#<CR>
 
 " clear searches
 nnoremap <space>/ :nohlsearch<CR>
-
-" colors
-let g:hybrid_custom_term_colors=1
-colorscheme hybrid
