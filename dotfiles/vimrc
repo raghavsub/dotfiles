@@ -23,7 +23,8 @@ set smartcase
 set autoindent
 set expandtab
 set shiftwidth=4
-set softtabstop=4 set autoread
+set softtabstop=4
+set autoread
 set backspace=2
 set hidden
 set laststatus=2
