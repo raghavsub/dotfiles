@@ -1,10 +1,12 @@
 " Raghav Subramaniam
 " .vimrc
 
-" colors
+filetype plugin indent on
+syntax on
 colorscheme apprentice
 
-" general settings
+" settings
+
 set hlsearch
 set incsearch
 set ignorecase
@@ -24,44 +26,34 @@ set noerrorbells
 set noswapfile
 set notitle
 
-" minpac setup
+set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
+
+set tags=tags;
+
+" minpac
+
 packadd minpac
+
 call minpac#init()
+
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-" color plugin
 call minpac#add('romainl/apprentice')
-
-" general plugins
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-unimpaired')
-
-" ag plugin
 call minpac#add('raghavsub/vim-agate')
-
-" git plugins
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-fugitive')
 
-" ctags setup
-set tags=tags;
+" mappings
 
-" status line
-set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
-
-" easy escape
 inoremap jj <ESC>
 
-" jk macros
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" fast buffer toggle
-nnoremap <space><space> :e#<CR>
-
-" clear searches
+nnoremap <space><space> :b #<CR>
 nnoremap <space>/ :nohlsearch<CR>
