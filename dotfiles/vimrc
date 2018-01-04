@@ -2,7 +2,7 @@
 " .vimrc
 
 filetype plugin indent on
-syntax on
+syntax enable
 colorscheme apprentice
 
 " settings
@@ -40,6 +40,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('romainl/apprentice')
 
+call minpac#add('romainl/vim-cool')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-surround')
@@ -62,6 +63,3 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
-
-nnoremap <space><space> <C-^>
-nnoremap <space>/ :noh<CR>
