@@ -55,5 +55,5 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-nnoremap <space><space> :b #<CR>
-nnoremap <space>/ :nohlsearch<CR>
+nnoremap <space><space> <C-^>
+nnoremap <space>/ :noh<CR>
