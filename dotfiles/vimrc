@@ -51,7 +51,7 @@ call minpac#add('tpope/vim-fugitive')
 " commands
 
 if executable('ag')
-    command! -nargs=+ Ag cexpr system("ag --vimgrep " . <q-args>)
+    command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
 endif
 
 " mappings
