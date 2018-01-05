@@ -49,13 +49,9 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-fugitive')
 
-" commands
+call minpac#add('junegunn/goyo.vim')
 
-if executable('ag')
-    command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
-endif
-
-" mappings
+" other
 
 inoremap jj <ESC>
 
@@ -65,3 +61,14 @@ nnoremap gj j
 nnoremap gk k
 
 nnoremap <space> <C-^>
+
+function! EnableProse()
+    call goyo#execute(0, [])
+    set noai noshowmode noshowcmd
+endfunction
+
+command! Prose call EnableProse()
+
+if executable('ag')
+    command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
+endif
