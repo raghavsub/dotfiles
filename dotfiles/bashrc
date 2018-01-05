@@ -61,3 +61,6 @@ fi
 if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
   export PATH="$PATH:$HOME/.gem/ruby/2.4.0/bin"
 fi
+
+# ctags alias
+alias ptags=ctags -R --fields=+l --languages=python --python-kinds=-iv .
