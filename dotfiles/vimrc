@@ -1,18 +1,12 @@
 " Raghav Subramaniam
 " .vimrc
 
-" vim-plug
-call plug#begin('~/.vim/plugged')
+filetype plugin indent on
+syntax enable
+colorscheme apprentice
 
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'w0ng/vim-hybrid'
+" settings
 
-call plug#end()
-
-" general
 set hlsearch
 set incsearch
 set ignorecase
@@ -32,35 +26,42 @@ set noerrorbells
 set noswapfile
 set notitle
 
-" colors
-let g:hybrid_custom_term_colors=1
-set background=dark
-colorscheme hybrid
+set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 
-" avoid escape
+set tags=tags;
+
+" minpac
+
+packadd minpac
+
+call minpac#init()
+
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+call minpac#add('romainl/apprentice')
+
+call minpac#add('romainl/vim-cool')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
+
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('tpope/vim-fugitive')
+
+" commands
+
+if executable('ag')
+    command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
+endif
+
+" mappings
+
 inoremap jj <ESC>
 
-" jk macros
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" leader
-let mapleader=" "
-
-" fast buffer toggle
-nnoremap <space><space> :e#<CR>
-
-" clear searches
-nnoremap <space>/ :nohlsearch<CR>
-
-" ctags
-set tags=tags;
-
-" ag
-set grepprg=ag\ --vimgrep
-command! -nargs=* Ag grep <args>
-
-" custom status line
-set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
+nnoremap <space> <C-^>
