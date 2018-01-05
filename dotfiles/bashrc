@@ -63,4 +63,4 @@ if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
 fi
 
 # ctags alias
-alias ptags=ctags -R --fields=+l --languages=python --python-kinds=-iv .
+alias ptags="ctags -R --fields=+l --languages=python --python-kinds=-iv ."
