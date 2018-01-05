@@ -60,8 +60,6 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-nnoremap <space> <C-^>
-
 function! EnableProse()
     call goyo#execute(0, [])
     set noai noshowmode noshowcmd
