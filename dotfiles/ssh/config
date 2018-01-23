@@ -1,6 +1,0 @@
-# Raghav Subramaniam
-# .ssh/config
-
-Host *
-    ServerAliveInterval 120
-    ServerAliveCountMax 30

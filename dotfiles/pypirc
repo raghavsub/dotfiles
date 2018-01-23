@@ -1,9 +1,0 @@
-# Raghav Subramaniam
-# .pypirc
-
-[distutils]
-index-servers = pypi
-
-[pypi]
-username = REDACTED
-password = REDACTED
