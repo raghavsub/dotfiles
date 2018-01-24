@@ -1,6 +1,0 @@
-#! /usr/bin/env sh
-
-# Raghav Subramaniam
-# .xserverrc
-
-exec /usr/bin/Xorg -nolisten tcp "$@" vt$XDG_VTNR
