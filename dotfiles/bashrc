@@ -34,7 +34,7 @@ fi
 
 # ls aliases
 alias la="ls -A"
-alias ll="ls -AFhl"
+alias ll="ls -Ahl"
 
 # cd aliases
 alias ..="cd .."
