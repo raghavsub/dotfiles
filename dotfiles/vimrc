@@ -60,12 +60,20 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-function! EnableProse()
-    call goyo#execute(0, [])
-    set noai noshowmode noshowcmd
+function! s:goyo_enter()
+    set noautoindent
+    set noshowmode
+    set noshowcmd
 endfunction
 
-command! Prose call EnableProse()
+function! s:goyo_leave()
+    set autoindent
+    set showmode
+    set showcmd
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 if executable('ag')
     command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
