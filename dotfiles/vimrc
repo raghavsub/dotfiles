@@ -61,12 +61,14 @@ nnoremap gj j
 nnoremap gk k
 
 function! s:goyo_enter()
+    silent !tmux set status off
     set noautoindent
     set noshowmode
     set noshowcmd
 endfunction
 
 function! s:goyo_leave()
+    silent !tmux set status on
     set autoindent
     set showmode
     set showcmd
