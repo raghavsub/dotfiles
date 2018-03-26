@@ -80,3 +80,5 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 if executable('ag')
     command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
 endif
+
+autocmd BufNewFile,BufRead *.p8 set sts=2 sw=2 syn=lua
