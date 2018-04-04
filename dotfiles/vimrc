@@ -1,10 +1,6 @@
 " Raghav Subramaniam
 " .vimrc
 
-filetype plugin indent on
-syntax enable
-colorscheme apprentice
-
 " settings
 
 set hlsearch
@@ -50,6 +46,8 @@ Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " other
+
+colorscheme apprentice
 
 inoremap jj <ESC>
 
