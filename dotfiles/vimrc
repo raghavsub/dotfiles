@@ -30,26 +30,24 @@ set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 
 set tags=tags;
 
-" minpac
+" vim-plug
 
-packadd minpac
+call plug#begin('~/.vim/plugged')
 
-call minpac#init()
+Plug 'romainl/apprentice'
 
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+Plug 'romainl/vim-cool'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
-call minpac#add('romainl/apprentice')
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
-call minpac#add('romainl/vim-cool')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-unimpaired')
+Plug 'junegunn/goyo.vim'
 
-call minpac#add('airblade/vim-gitgutter')
-call minpac#add('tpope/vim-fugitive')
-
-call minpac#add('junegunn/goyo.vim')
+call plug#end()
 
 " other
 
