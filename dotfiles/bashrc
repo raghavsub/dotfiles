@@ -18,21 +18,9 @@ HISTFILESIZE=2000
 
 # prompt
 PS1="\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ "
-case "$TERM" in
-    xterm*) PS1="\[\e]0;\u@\h:\w\a\]$PS1"
-esac
-
-# color aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls="ls --color=auto"
-
-    alias grep="grep --color=auto"
-    alias fgrep="fgrep --color=auto"
-    alias egrep="egrep --color=auto"
-fi
 
 # ls aliases
+alias ls="ls --color=auto"
 alias la="ls -A"
 alias ll="ls -Ahl"
 
@@ -54,6 +42,4 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ruby
-if [[ ! "$PATH" == *$HOME/.gem/ruby/2.4.0/bin* ]]; then
-  export PATH="$PATH:$HOME/.gem/ruby/2.4.0/bin"
-fi
+export PATH="$PATH":"$(ruby -e 'print Gem.user_dir')"/bin
