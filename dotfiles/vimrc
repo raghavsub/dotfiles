@@ -30,16 +30,15 @@ set tags=tags;
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'romainl/apprentice'
+Plug 'airblade/vim-gitgutter'
 
+Plug 'romainl/apprentice'
 Plug 'romainl/vim-cool'
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
