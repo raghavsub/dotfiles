@@ -41,10 +41,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
-Plug 'junegunn/goyo.vim'
-
-Plug 'justinj/vim-pico8-syntax'
-
 call plug#end()
 
 " other
@@ -57,23 +53,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
-
-function! s:goyo_enter()
-    silent !tmux set status off
-    set noautoindent
-    set noshowmode
-    set noshowcmd
-endfunction
-
-function! s:goyo_leave()
-    silent !tmux set status on
-    set autoindent
-    set showmode
-    set showcmd
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 if executable('ag')
     command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
