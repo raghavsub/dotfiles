@@ -30,24 +30,17 @@ set tags=tags;
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'mhinz/vim-signify'
-
-Plug 'romainl/vim-cool'
-
 Plug 'tpope/vim-commentary'
+Plug 'romainl/vim-cool'
+Plug 'w0ng/vim-hybrid'
 Plug 'tpope/vim-repeat'
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-
-Plug 'w0ng/vim-hybrid'
 
 call plug#end()
 
 " other
-
-let g:hybrid_custom_term_colors = 1
-set background=dark
-colorscheme hybrid
 
 inoremap jj <ESC>
 
@@ -57,5 +50,11 @@ nnoremap gj j
 nnoremap gk k
 
 if executable('ag')
-    command! -nargs=+ Ag cexpr system('ag --vimgrep ' . <q-args>)
+    command! -nargs=* Ag cexpr system('ag --vimgrep ' . <q-args>)
 endif
+
+let g:hybrid_custom_term_colors = 1
+let g:signify_vcs_list = ['git']
+
+set background=dark
+colorscheme hybrid
