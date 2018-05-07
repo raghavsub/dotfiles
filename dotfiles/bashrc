@@ -40,6 +40,3 @@ fi
 if [[ -f "$HOME"/.fzf.bash ]] ; then
     . "$HOME"/.fzf.bash
 fi
-
-# ruby
-export PATH="$PATH":"$(ruby -e 'print Gem.user_dir')"/bin

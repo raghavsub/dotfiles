@@ -30,9 +30,8 @@ set tags=tags;
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
-Plug 'romainl/apprentice'
 Plug 'romainl/vim-cool'
 
 Plug 'tpope/vim-commentary'
@@ -40,11 +39,15 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
+Plug 'w0ng/vim-hybrid'
+
 call plug#end()
 
 " other
 
-colorscheme apprentice
+let g:hybrid_custom_term_colors = 1
+set background=dark
+colorscheme hybrid
 
 inoremap jj <ESC>
 
