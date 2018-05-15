@@ -44,13 +44,6 @@ call plug#end()
 
 colorscheme apprentice
 
-inoremap jj <ESC>
-
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
-
 if executable('ag')
     command! -nargs=* Ag cexpr system('ag --vimgrep ' . <q-args>)
 endif
