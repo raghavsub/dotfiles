@@ -26,6 +26,9 @@ set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 
 set tags=tags;
 
+set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep
+set grepformat^=%f:%l:%c:%m
+
 " vim-plug
 
 call plug#begin('~/.vim/plugged')
@@ -33,8 +36,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-signify'
 Plug 'romainl/apprentice'
 Plug 'romainl/vim-cool'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
@@ -51,8 +54,8 @@ nnoremap gk k
 
 colorscheme apprentice
 
-if executable('ag')
-    command! -nargs=* Ag cexpr system('ag --vimgrep ' . <q-args>)
-endif
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
 
 let g:signify_vcs_list = ['git']
