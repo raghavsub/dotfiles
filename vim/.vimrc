@@ -1,8 +1,11 @@
 " Raghav Subramaniam
 " .vimrc
 
-" settings
+filetype plugin indent on
+syntax enable
+colorscheme apprentice
 
+" settings
 set hlsearch
 set incsearch
 set ignorecase
@@ -11,43 +14,30 @@ set autoindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-set autoread
 set backspace=2
 set hidden
 set laststatus=2
 set number
 set wildmenu
 set nobackup
-set noerrorbells
 set noswapfile
-set notitle
-
 set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
-
 set tags=tags;
-
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
 
-" vim-plug
+" plugins
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('romainl/apprentice')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('mhinz/vim-signify')
+call minpac#add('romainl/vim-cool')
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'romainl/apprentice'
-
-Plug 'mhinz/vim-signify'
-Plug 'romainl/vim-cool'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-unimpaired'
-
-call plug#end()
-
-" other
-
-colorscheme apprentice
-
+" misc
 let g:netrw_banner = 0
-
 let g:signify_vcs_list = ['git']
