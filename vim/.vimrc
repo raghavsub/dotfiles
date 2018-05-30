@@ -22,9 +22,6 @@ set wildmenu
 set nobackup
 set noswapfile
 set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
-set tags=tags;
-set grepprg=ag\ --vimgrep\ $*
-set grepformat=%f:%l:%c:%m
 
 " plugins
 packadd minpac
