@@ -35,23 +35,16 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'romainl/apprentice'
 
-Plug 'tpope/vim-unimpaired'
+Plug 'mhinz/vim-signify'
+Plug 'romainl/vim-cool'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'mhinz/vim-signify'
-Plug 'romainl/vim-cool'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
 " other
-
-inoremap jj <ESC>
-
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
 
 colorscheme apprentice
 
