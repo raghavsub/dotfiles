@@ -38,3 +38,4 @@ call minpac#add('romainl/vim-cool')
 " misc
 let g:netrw_banner = 0
 let g:signify_vcs_list = ['git']
+inoremap <C-c> <NOP>
