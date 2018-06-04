@@ -9,9 +9,6 @@ esac
 # editor
 export EDITOR=vim
 
-# vim mode
-set -o vi
-
 # history
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
