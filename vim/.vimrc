@@ -34,8 +34,11 @@ call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('mhinz/vim-signify')
 call minpac#add('romainl/vim-cool')
+call minpac#add('raghavsub/vim-agate')
 
 " misc
 let g:netrw_banner = 0
 let g:signify_vcs_list = ['git']
+
+" tmp
 inoremap <C-c> <NOP>
