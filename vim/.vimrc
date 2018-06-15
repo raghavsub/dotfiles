@@ -5,23 +5,33 @@ filetype plugin indent on
 syntax enable
 colorscheme apprentice
 
-" settings
+" basics
+set backspace=2
+set hidden
+set number
+set wildmenu
+
+" better search
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set history=200
+
+" default (python) indentation
 set autoindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-set backspace=2
-set hidden
+
+" custom statusline
+set noruler
 set laststatus=2
-set number
-set wildmenu
+set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
+
+" no backup/swap files
 set nobackup
 set noswapfile
-set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 
 " plugins
 packadd minpac
@@ -36,6 +46,8 @@ call minpac#add('raghavsub/vim-agate')
 call minpac#add('romainl/apprentice')
 call minpac#add('romainl/vim-cool')
 
-" misc
+" make netrw prettier
 let g:netrw_banner = 0
+
+" make signify faster
 let g:signify_vcs_list = ['git']
