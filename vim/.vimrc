@@ -5,9 +5,14 @@ filetype plugin indent on
 syntax enable
 colorscheme apprentice
 
+" SETTINGS
+
 " basics
+set autoindent
 set backspace=2
+set complete-=i
 set hidden
+set nrformats-=octal
 set number
 set wildmenu
 
@@ -18,12 +23,6 @@ set ignorecase
 set smartcase
 set history=200
 
-" default (python) indentation
-set autoindent
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-
 " custom statusline
 set noruler
 set laststatus=2
@@ -33,21 +32,31 @@ set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
 set nobackup
 set noswapfile
 
-" plugins
+" PLUGINS
+
+" netrw banner removal
+let g:netrw_banner = 0
+
+" plugin management
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('mhinz/vim-signify')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('raghavsub/vim-agate')
+
+" colorscheme
 call minpac#add('romainl/apprentice')
+
+" tpope magic
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-repeat')
+
+" :Ag
+call minpac#add('raghavsub/vim-agate')
+
+" better :nohl
 call minpac#add('romainl/vim-cool')
 
-" make netrw prettier
-let g:netrw_banner = 0
-
-" make signify faster
+" git gutter
+call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
