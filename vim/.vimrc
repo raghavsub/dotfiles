@@ -34,9 +34,6 @@ set noswapfile
 
 " PLUGINS
 
-" netrw banner removal
-let g:netrw_banner = 0
-
 " plugin management
 packadd minpac
 call minpac#init()
@@ -60,3 +57,6 @@ call minpac#add('romainl/vim-cool')
 " git gutter
 call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
+
+" netrw banner removal
+let g:netrw_banner = 0
