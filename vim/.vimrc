@@ -42,11 +42,9 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " colorscheme
 call minpac#add('romainl/apprentice')
 
-" tpope magic
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-repeat')
+" git gutter
+call minpac#add('mhinz/vim-signify')
+let g:signify_vcs_list = ['git']
 
 " :Ag
 call minpac#add('raghavsub/vim-agate')
@@ -54,9 +52,8 @@ call minpac#add('raghavsub/vim-agate')
 " better :nohl
 call minpac#add('romainl/vim-cool')
 
-" git gutter
-call minpac#add('mhinz/vim-signify')
-let g:signify_vcs_list = ['git']
-
-" netrw banner removal
-let g:netrw_banner = 0
+" tpope magic
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-repeat')
