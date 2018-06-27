@@ -42,7 +42,9 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " colorscheme
 call minpac#add('romainl/apprentice')
 
-" git gutter
+" git
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-rhubarb')
 call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
 
