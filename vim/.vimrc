@@ -42,9 +42,14 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " colorscheme
 call minpac#add('romainl/apprentice')
 
+" tpope magic
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-repeat')
+
 " git
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('tpope/vim-rhubarb')
 call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
 
@@ -53,12 +58,6 @@ call minpac#add('raghavsub/vim-agate')
 
 " better :nohl
 call minpac#add('romainl/vim-cool')
-
-" tpope magic
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-repeat')
 
 " MAPPINGS
 
