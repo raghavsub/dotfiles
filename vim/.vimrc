@@ -53,11 +53,11 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
 
-" :Ag
-call minpac#add('raghavsub/vim-agate')
-
 " better :nohl
 call minpac#add('romainl/vim-cool')
+
+" :Ag
+call minpac#add('raghavsub/vim-agate', {'branch': 'develop'})
 
 " MAPPINGS
 
