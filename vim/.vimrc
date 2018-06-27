@@ -57,3 +57,8 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-repeat')
+
+" MAPPINGS
+
+" guake
+nnoremap <space> :term<CR>
