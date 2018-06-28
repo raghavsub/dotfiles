@@ -48,6 +48,10 @@ call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-repeat')
 
+" ag
+call minpac#add('mileszs/ack.vim')
+let g:ackprg = 'ag --vimgrep'
+
 " git
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('mhinz/vim-signify')
@@ -55,9 +59,6 @@ let g:signify_vcs_list = ['git']
 
 " better :nohl
 call minpac#add('romainl/vim-cool')
-
-" :Ag
-call minpac#add('raghavsub/vim-agate', {'branch': 'develop'})
 
 " MAPPINGS
 
