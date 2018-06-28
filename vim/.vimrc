@@ -50,7 +50,7 @@ call minpac#add('tpope/vim-repeat')
 
 " ag
 call minpac#add('mileszs/ack.vim')
-let g:ackprg = 'ag --vimgrep'
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " git
 call minpac#add('tpope/vim-fugitive')
