@@ -59,8 +59,3 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('mhinz/vim-signify')
 let g:signify_vcs_list = ['git']
-
-" MAPPINGS
-
-" guake
-nnoremap <space> :term<CR>
