@@ -34,7 +34,7 @@ set noswapfile
 
 " PLUGINS
 
-" plugin management
+" minpac
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
@@ -42,14 +42,13 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " colorscheme
 call minpac#add('romainl/apprentice')
 
-" tpope magic
+" general
+call minpac#add('romainl/vim-cool')
+call minpac#add('tommcdo/vim-lion')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-repeat')
-
-" better :nohl
-call minpac#add('romainl/vim-cool')
 
 " ag
 call minpac#add('mileszs/ack.vim')
