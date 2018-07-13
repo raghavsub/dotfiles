@@ -26,7 +26,7 @@ set history=200
 " custom statusline
 set noruler
 set laststatus=2
-set statusline=%m\ %f%=buf:%-3ncol:%-3c%y
+set statusline=%f\ %m%=buf:%n\ col:%c\ %y
 
 " no backup/swap files
 set nobackup
