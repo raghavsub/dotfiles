@@ -1,9 +1,11 @@
 " Raghav Subramaniam
 " .vimrc
-
-" basic settings
+"
 filetype plugin indent on
 syntax enable
+colorscheme apprentice
+
+" basic settings
 set autoindent
 set backspace=2
 set complete-=i
@@ -30,16 +32,11 @@ set noswapfile
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
 
-" minpac
+" plugins
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-" colorscheme
 call minpac#add('romainl/apprentice')
-colorscheme apprentice
-
-" plugins
 call minpac#add('tommcdo/vim-lion')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-repeat')
