@@ -1,19 +1,17 @@
 " Raghav Subramaniam
 " .vimrc
 
+" basic settings
 filetype plugin indent on
 syntax enable
-colorscheme apprentice
-
-" SETTINGS
-
-" basics
 set autoindent
 set backspace=2
 set complete-=i
 set hidden
+set laststatus=2
 set nrformats-=octal
 set number
+set ruler
 set wildmenu
 
 " better search
@@ -22,17 +20,15 @@ set incsearch
 set ignorecase
 set smartcase
 set history=200
-
-" custom statusline
-set noruler
-set laststatus=2
-set statusline=%f\ %m%=buf:%n\ col:%c\ %y
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " no backup/swap files
 set nobackup
 set noswapfile
 
-" PLUGINS
+" ag
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
 
 " minpac
 packadd minpac
@@ -41,20 +37,11 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " colorscheme
 call minpac#add('romainl/apprentice')
+colorscheme apprentice
 
-" general
-call minpac#add('romainl/vim-cool')
+" plugins
 call minpac#add('tommcdo/vim-lion')
-call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-repeat')
-
-" ag
-call minpac#add('mileszs/ack.vim')
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" git
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('mhinz/vim-signify')
-let g:signify_vcs_list = ['git']
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
