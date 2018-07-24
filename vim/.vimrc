@@ -22,7 +22,6 @@ set incsearch
 set ignorecase
 set smartcase
 set history=200
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " no backup/swap files
 set nobackup
@@ -37,8 +36,9 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('romainl/apprentice')
-call minpac#add('tommcdo/vim-lion')
-call minpac#add('tpope/vim-commentary')
+call minpac#add('romainl/vim-cool')
+call minpac#add('tommcdo/vim-lion') " gl gL (operator)
+call minpac#add('tpope/vim-commentary') " gc (operator)
 call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-surround') " ys cs ds S
+call minpac#add('tpope/vim-unimpaired') " ]b ]q
