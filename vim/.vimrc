@@ -37,8 +37,9 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('romainl/apprentice')
 call minpac#add('romainl/vim-cool')
-call minpac#add('tommcdo/vim-lion') " gl gL (operator)
-call minpac#add('tpope/vim-commentary') " gc (operator)
+call minpac#add('tommcdo/vim-lion')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-fugitive')
 call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-surround') " ys cs ds S
-call minpac#add('tpope/vim-unimpaired') " ]b ]q
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
