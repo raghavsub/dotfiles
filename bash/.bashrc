@@ -1,6 +1,7 @@
 # Raghav Subramaniam
 # .bashrc
 
+# interactive usage
 case $- in
     *i*) ;;
       *) return;;
@@ -22,11 +23,6 @@ PS1="\[\e[32m\]at \[\e[31m\]\h \[\e[32m\]in \[\e[34m\]\w\[\e[0m\]\n$ "
 alias ls="ls --color=auto"
 alias la="ls -A"
 alias ll="ls -Ahl"
-
-# cd aliases
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
 
 # enable completion
 if [[ -f /usr/share/bash-completion/bash_completion ]] ; then
