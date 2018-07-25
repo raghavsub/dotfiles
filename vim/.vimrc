@@ -23,9 +23,14 @@ nnoremap <C-l> :nohlsearch<CR><C-l>
 set nobackup
 set noswapfile
 
+" netrw
+let g:netrw_banner = 0
+
 " ag
-set grepprg=ag\ --vimgrep\ $*
-set grepformat=%f:%l:%c:%m
+if executable('ag')
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+endif
 
 " apprentice
 silent! colorscheme apprentice
