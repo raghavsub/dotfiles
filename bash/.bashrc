@@ -17,7 +17,7 @@ HISTFILESIZE=2000
 shopt -s histappend
 
 # prompt
-PS1="\[\e[32m\][\[\e[37m\]\W\[\e[32m\]]$\[\e[0m\] "
+PS1="\[\e[34;01m\]\W\[\e[0m\] $ "
 
 # ls aliases
 alias ls="ls --color=auto"
