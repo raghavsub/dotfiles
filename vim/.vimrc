@@ -28,8 +28,8 @@ let g:netrw_banner = 0
 
 " ag
 if executable('ag')
-  set grepprg=ag\ --vimgrep\ $*
-  set grepformat=%f:%l:%c:%m
+    set grepprg=ag\ --vimgrep\ $*
+    set grepformat=%f:%l:%c:%m
 endif
 
 " apprentice

@@ -4,7 +4,7 @@
 # interactive usage
 case $- in
     *i*) ;;
-      *) return;;
+    *) return ;;
 esac
 
 # editor
