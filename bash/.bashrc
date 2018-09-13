@@ -33,10 +33,3 @@ fi
 if [[ -f "$HOME"/.fzf.bash ]] ; then
     . "$HOME"/.fzf.bash
 fi
-
-# ruby
-if [[ -x "$(command -v ruby)" ]] ; then
-    if [[ ! "$PATH" == *"$(ruby -e 'print Gem.user_dir')"* ]] ; then
-        export PATH=""$PATH":"$(ruby -e 'print Gem.user_dir')"/bin"
-    fi
-fi
