@@ -5,7 +5,7 @@
 filetype plugin indent on
 syntax enable
 set autoindent
-set backspace=2
+set backspace=indent,eol,start
 set hidden
 set laststatus=2
 set number
