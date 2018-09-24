@@ -1,6 +1,3 @@
-# Raghav Subramaniam
-# .bashrc
-
 # interactive usage
 case $- in
     *i*) ;;

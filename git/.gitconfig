@@ -1,6 +1,3 @@
-# Raghav Subramaniam
-# .gitconfig
-
 [log]
     date = short
 
@@ -38,4 +35,4 @@
     email = raghavs511@gmail.com
 
 [init]
-    templatedir = ~/.git_template
+    templatedir = ~/.gittemplate

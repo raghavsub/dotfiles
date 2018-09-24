@@ -1,6 +1,3 @@
-" Raghav Subramaniam
-" .vimrc
-
 " basic settings
 filetype plugin indent on
 syntax enable
