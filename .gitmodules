@@ -1,0 +1,20 @@
+[submodule "vim/.vim/pack/bundle/start/vim-commentary"]
+	path = vim/.vim/pack/bundle/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-fugitive"]
+	path = vim/.vim/pack/bundle/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-unimpaired"]
+	path = vim/.vim/pack/bundle/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/apprentice"]
+	path = vim/.vim/pack/bundle/start/apprentice
+	url = https://github.com/romainl/apprentice.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/targets.vim"]
+	path = vim/.vim/pack/bundle/start/targets.vim
+	url = https://github.com/wellle/targets.vim.git
+	branch = master
