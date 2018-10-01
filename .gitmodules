@@ -18,3 +18,7 @@
 	path = vim/.vim/pack/bundle/start/targets.vim
 	url = https://github.com/wellle/targets.vim.git
 	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-qf"]
+	path = vim/.vim/pack/bundle/start/vim-qf
+	url = https://github.com/romainl/vim-qf.git
+	branch = master
