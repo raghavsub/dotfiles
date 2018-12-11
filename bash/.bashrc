@@ -17,13 +17,13 @@ shopt -s histappend
 PS1="\[\e[37m\]\W\[\e[0m\] $ "
 
 # ls aliases
-alias ls="ls --color=auto"
+alias ls="ls -G"
 alias la="ls -A"
 alias ll="ls -Ahl"
 
 # enable completion
-if [[ -f /usr/share/bash-completion/bash_completion ]] ; then
-    . /usr/share/bash-completion/bash_completion
+if [[ -f /usr/local/etc/bash-completion/bash_completion ]] ; then
+    . /usr/local/etc/bash-completion/bash_completion
 fi
 
 # fzf
