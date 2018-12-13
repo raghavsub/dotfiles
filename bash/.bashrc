@@ -22,8 +22,8 @@ alias la="ls -A"
 alias ll="ls -Ahl"
 
 # enable completion
-if [[ -f /usr/local/etc/bash-completion/bash_completion ]] ; then
-    . /usr/local/etc/bash-completion/bash_completion
+if [[ -f /usr/local/etc/bash_completion ]] ; then
+    . /usr/local/etc/bash_completion
 fi
 
 # fzf
