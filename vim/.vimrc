@@ -23,6 +23,9 @@ set noswapfile
 " netrw
 let g:netrw_banner = 0
 
+" ctags
+set tags+=.git/tags;
+
 " ag
 if executable('ag')
     set grepprg=ag\ --vimgrep\ $*
