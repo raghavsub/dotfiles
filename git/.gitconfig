@@ -35,4 +35,4 @@
     email = raghavs511@gmail.com
 
 [init]
-    templatedir = ~/.gittemplate
+    templatedir = ~/.git_template
