@@ -14,7 +14,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 " pollution
 set nobackup
