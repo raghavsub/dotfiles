@@ -14,7 +14,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " pollution
 set nobackup
@@ -27,7 +27,7 @@ let g:netrw_banner = 0
 set tags+=.git/tags;
 
 " ag
-if executable('ag')
+if executable("ag")
     set grepprg=ag\ --vimgrep\ $*
     set grepformat=%f:%l:%c:%m
 endif
@@ -36,6 +36,5 @@ endif
 silent! colorscheme apprentice
 
 " ultisnips
-let g:UltiSnipsExpandTrigger = '<Tab>'
-let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+let g:UltiSnipsJumpForwardTrigger = "<Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
