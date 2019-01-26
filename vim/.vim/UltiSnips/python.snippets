@@ -1,11 +1,6 @@
 global !p
 
 
-def write_super_initializer(classname, supername, snip):
-	if supername != 'object':
-		snip += 'super({}, self).__init__()'.format(classname)
-
-
 class Param(object):
 	"""A wrapper for a Python (kw)arg."""
 
@@ -19,17 +14,19 @@ class Param(object):
 	def name(self):
 		return self._param.split('=')[0].strip()
 
-	def is_kwarg(self):
-		return '=' in self._param
-	
 
 def parse_params(paramlist):
-	return [Param(param) for param in paramlist.split(', ')]
+	return [Param(param) for param in paramlist.split(',')]
 
 
 def add_params_to_docstring(params, snip):
 	for param in params:
 		snip += ':param {}:'.format(param.name())
+
+
+def write_super_initializer(classname, supername, snip):
+	if supername != 'object':
+		snip += 'super({}, self).__init__()'.format(classname)
 
 
 def write_class_vars(params, snip):
@@ -38,11 +35,13 @@ def write_class_vars(params, snip):
 
 
 def write_properties(params, snip):
-	for param in params:
+	for i, param in enumerate(params):
 		snip += '@property'
 		snip += 'def {}(self):'.format(param.name())
 		snip >> 1
 		snip += 'return self._{}'.format(param.name())
+		if i < len(params) - 1:
+			snip.rv += '\n'
 		snip << 1
 
 
