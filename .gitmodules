@@ -6,18 +6,6 @@
 	path = vim/.vim/pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-unimpaired"]
-	path = vim/.vim/pack/bundle/start/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
-	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-surround"]
-	path = vim/.vim/pack/bundle/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-repeat"]
-	path = vim/.vim/pack/bundle/start/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
-	branch = master
 [submodule "vim/.vim/pack/bundle/start/ultisnips"]
 	path = vim/.vim/pack/bundle/start/ultisnips
 	url = https://github.com/sirver/ultisnips.git
