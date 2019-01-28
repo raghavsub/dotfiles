@@ -34,17 +34,17 @@ set tags+=.git/tags;
 
 " unimpaired-style mappings
 function! MakeListMap(map, pre)
-  execute "nnoremap <silent> [".a:map.' :<C-U>'.a:pre.'previous<CR>'
-  execute "nnoremap <silent> ]".a:map.' :<C-U>'.a:pre.'next<CR>'
-  execute "nnoremap <silent> [".toupper(a:map).' :<C-U>'.a:pre.'first<CR>'
-  execute "nnoremap <silent> ]".toupper(a:map).' :<C-U>'.a:pre.'last<CR>'
+  execute "nnoremap <silent> [".a:map." :<C-U>".a:pre."previous<CR>"
+  execute "nnoremap <silent> ]".a:map." :<C-U>".a:pre."next<CR>"
+  execute "nnoremap <silent> [".toupper(a:map)." :<C-U>".a:pre."first<CR>"
+  execute "nnoremap <silent> ]".toupper(a:map)." :<C-U>".a:pre."last<CR>"
 endfunction
 
-call MakeListMap('a', '')
-call MakeListMap('b', 'b')
-call MakeListMap('l', 'l')
-call MakeListMap('q', 'c')
-call MakeListMap('t', 't')
+call MakeListMap("a", "")
+call MakeListMap("b", "b")
+call MakeListMap("l", "l")
+call MakeListMap("q", "c")
+call MakeListMap("t", "t")
 
 " apprentice
 silent! colorscheme apprentice
