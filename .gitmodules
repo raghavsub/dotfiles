@@ -18,3 +18,7 @@
 	path = vim/.vim/pack/bundle/start/ultisnips
 	url = https://github.com/sirver/ultisnips.git
 	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-indent-object"]
+	path = vim/.vim/pack/bundle/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+	branch = master
