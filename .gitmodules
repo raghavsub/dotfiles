@@ -6,6 +6,14 @@
 	path = vim/.vim/pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-qf"]
+	path = vim/.vim/pack/bundle/start/vim-qf
+	url = https://github.com/romainl/vim-qf.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-sandwich"]
+	path = vim/.vim/pack/bundle/start/vim-sandwich
+	url = https://github.com/machakann/vim-sandwich.git
+	branch = master
 [submodule "vim/.vim/pack/bundle/start/ultisnips"]
 	path = vim/.vim/pack/bundle/start/ultisnips
 	url = https://github.com/sirver/ultisnips.git
