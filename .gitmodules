@@ -2,9 +2,17 @@
 	path = vim/.vim/pack/bundle/start/apprentice
 	url = https://github.com/romainl/apprentice.git
 	branch = master
+[submodule "vim/.vim/pack/bundle/start/ultisnips"]
+	path = vim/.vim/pack/bundle/start/ultisnips
+	url = https://github.com/sirver/ultisnips.git
+	branch = master
 [submodule "vim/.vim/pack/bundle/start/vim-commentary"]
 	path = vim/.vim/pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-indent-object"]
+	path = vim/.vim/pack/bundle/start/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
 	branch = master
 [submodule "vim/.vim/pack/bundle/start/vim-qf"]
 	path = vim/.vim/pack/bundle/start/vim-qf
@@ -13,12 +21,4 @@
 [submodule "vim/.vim/pack/bundle/start/vim-sandwich"]
 	path = vim/.vim/pack/bundle/start/vim-sandwich
 	url = https://github.com/machakann/vim-sandwich.git
-	branch = master
-[submodule "vim/.vim/pack/bundle/start/ultisnips"]
-	path = vim/.vim/pack/bundle/start/ultisnips
-	url = https://github.com/sirver/ultisnips.git
-	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-indent-object"]
-	path = vim/.vim/pack/bundle/start/vim-indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object.git
 	branch = master
