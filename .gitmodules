@@ -18,7 +18,11 @@
 	path = vim/.vim/pack/bundle/start/vim-qf
 	url = https://github.com/romainl/vim-qf.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-sandwich"]
-	path = vim/.vim/pack/bundle/start/vim-sandwich
-	url = https://github.com/machakann/vim-sandwich.git
+[submodule "vim/.vim/pack/bundle/start/vim-repeat"]
+	path = vim/.vim/pack/bundle/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+	branch = master
+[submodule "vim/.vim/pack/bundle/start/vim-surround"]
+	path = vim/.vim/pack/bundle/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
 	branch = master
