@@ -48,7 +48,3 @@ call MakeListMap("t", "t")
 
 " apprentice
 silent! colorscheme apprentice
-
-" ultisnips
-let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
