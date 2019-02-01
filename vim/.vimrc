@@ -16,12 +16,11 @@ set ignorecase
 set smartcase
 nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
-" pollution
-set nobackup
-set noswapfile
+" swapfiles
+set directory=~/.tmp//
 
-" netrw
-let g:netrw_banner = 0
+" ctags
+set tags+=.git/tags;
 
 " ag
 if executable("ag")
@@ -29,8 +28,8 @@ if executable("ag")
   set grepformat=%f:%l:%c:%m
 endif
 
-" ctags in git repos
-set tags+=.git/tags;
+" netrw
+let g:netrw_banner = 0
 
 " unimpaired-style mappings
 function! MakeListMap(map, pre)
