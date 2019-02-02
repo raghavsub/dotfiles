@@ -17,10 +17,10 @@ set smartcase
 nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
 " swapfiles
-set directory=~/.tmp//
+set directory^=~/.tmp//
 
 " ctags
-set tags+=.git/tags;
+set tags^=.git/tags;
 
 " ag
 if executable("ag")
