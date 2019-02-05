@@ -1,6 +1,10 @@
-" basic settings
 filetype plugin indent on
 syntax enable
+colorscheme apprentice
+
+" OPTIONS
+
+" basics
 set autoindent
 set backspace=indent,eol,start
 set hidden
@@ -14,12 +18,11 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
-" swapfiles
+" swapfile management
 set directory^=~/.tmp//
 
-" ctags
+" ctags in git repos
 set tags^=.git/tags;
 
 " ag
@@ -28,22 +31,19 @@ if executable("ag")
   set grepformat=%f:%l:%c:%m
 endif
 
-" netrw
+" VARIABLES
+
+" clean up netrw
 let g:netrw_banner = 0
 
-" unimpaired-style mappings
-function! MakeListMap(map, pre)
-  execute "nnoremap <silent> [".a:map." :<C-U>".a:pre."previous<CR>"
-  execute "nnoremap <silent> ]".a:map." :<C-U>".a:pre."next<CR>"
-  execute "nnoremap <silent> [".toupper(a:map)." :<C-U>".a:pre."first<CR>"
-  execute "nnoremap <silent> ]".toupper(a:map)." :<C-U>".a:pre."last<CR>"
-endfunction
+" MAPPINGS
 
-call MakeListMap("a", "")
-call MakeListMap("b", "b")
-call MakeListMap("l", "l")
-call MakeListMap("q", "c")
-call MakeListMap("t", "t")
+" clear search highlighting
+nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
 
-" apprentice
-silent! colorscheme apprentice
+" magic buffer navigation
+nnoremap <silent> gb :<C-U>ls<CR>:b<Space>
+
+" vim-qf quickfix navigation
+nmap [q <Plug>(qf_qf_previous)
+nmap ]q <Plug>(qf_qf_next)
