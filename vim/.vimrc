@@ -39,10 +39,10 @@ let g:netrw_banner = 0
 " MAPPINGS
 
 " clear search highlighting
-nnoremap <silent> <C-L> :<C-U>nohlsearch<CR><C-L>
+nnoremap <C-L> :nohlsearch<CR><C-L>
 
 " magic buffer navigation
-nnoremap <silent> gb :<C-U>ls<CR>:b<Space>
+nnoremap gb :ls<CR>:b<Space>
 
 " vim-qf quickfix navigation
 nmap [q <Plug>(qf_qf_previous)
