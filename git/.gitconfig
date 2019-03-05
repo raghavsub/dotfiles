@@ -1,29 +1,20 @@
-[log]
-    date = short
-
-[format]
-    pretty = format:"%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s"
-
 [alias] 
-    l = log -n 20
-    ll = log
+    s = status
 
-    a = add
+    l = log --oneline --decorate -n 20
+
+    d = diff
+    ds = diff --stat
+
     aa = add -A
 
     c = commit --verbose
-    cam = commit -a -m
     amend = commit --amend
-    
-    d = diff
-    ds = diff --stat
-    
-    s = status
+
+    br = branch
 
     co = checkout
     cob = checkout -b
-
-    br = branch
 
     unstage = reset HEAD
 
