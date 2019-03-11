@@ -1,5 +1,5 @@
 filetype plugin indent on
-syntax enable
+syntax on
 colorscheme apprentice
 
 " OPTIONS
