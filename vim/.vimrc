@@ -31,11 +31,6 @@ if executable("ag")
   set grepformat=%f:%l:%c:%m
 endif
 
-" VARIABLES
-
-" clean up netrw
-let g:netrw_banner = 0
-
 " MAPPINGS
 
 " clear search highlighting
@@ -47,3 +42,8 @@ nnoremap gb :ls<CR>:b<Space>
 " vim-qf quickfix navigation
 nmap [q <Plug>(qf_qf_previous)
 nmap ]q <Plug>(qf_qf_next)
+
+" VARIABLES
+
+" clean up netrw
+let g:netrw_banner = 0
