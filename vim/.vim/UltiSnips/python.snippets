@@ -1,8 +1,11 @@
+#########################
+# FUNCTIONS AND CLASSES #
+#########################
+
 global !p
 
-
 class Param(object):
-	"""A wrapper for a Python (kw)arg."""
+	"""A wrapper for a function parameter."""
 
 	def __init__(self, param):
 		self._param = param
@@ -12,16 +15,18 @@ class Param(object):
 		return self._param
 
 	def name(self):
-		return self._param.split('=')[0].strip()
+		return self.param.split('=')[0].strip()
 
 
 def parse_params(paramlist):
-	return [Param(param) for param in paramlist.split(',')]
+	return [Param(param) for param in paramlist.split(',') if param != 'self']
 
 
 def add_params_to_docstring(params, snip):
-	for param in params:
-		snip += ':param {}:'.format(param.name())
+	if params:
+		snip.rv += '\n'
+		for param in params:
+			snip += ':param {}:'.format(param.name())
 
 
 def write_super_initializer(classname, supername, snip):
@@ -44,19 +49,17 @@ def write_properties(params, snip):
 			snip.rv += '\n'
 		snip << 1
 
-
 endglobal
 
-snippet cl "New-style Python class" b
+snippet class "New-style class" b
 class ${1:ClassName}(${2:object}):
 	"""
-	${3:Docstring.}
-`!p
+	${3:Docstring.}`!p
 snip >> 1
 add_params_to_docstring(parse_params(t[4]), snip)`
 	"""
 
-	def __init__(self, ${4:param_name}):`!p
+	def __init__(${4:self}):`!p
 snip >> 2
 write_super_initializer(t[1], t[2], snip)
 write_class_vars(parse_params(t[4]), snip)
@@ -66,4 +69,45 @@ write_class_vars(parse_params(t[4]), snip)
 snip >> 1
 write_properties(parse_params(t[4]), snip)
 `
+endsnippet
+
+snippet def "Function" b
+def ${1:function_name}($2):
+	"""
+	${3:Docstring.}`!p
+snip >> 1
+add_params_to_docstring(parse_params(t[2]), snip)`
+	:return:
+	"""
+	$0
+endsnippet
+
+###########
+# SCRIPTS #
+###########
+
+snippet #! "Script shebang" b
+#! /usr/bin/env python
+endsnippet
+
+snippet ifmain "Script entrypoint" b
+if __name__ == '__main__':
+	${1:${VISUAL:main()}}
+endsnippet
+
+##############
+# UNIT TESTS #
+##############
+
+snippet testcase "Test case" b
+class ${1:TestCaseName}(unittest.TestCase):
+
+	def setUp(self):
+		${4:pass}
+
+	def tearDown(self):
+		${5:pass}
+
+	def test_${6:test_name}(self):
+		${7:${VISUAL:pass}}
 endsnippet
