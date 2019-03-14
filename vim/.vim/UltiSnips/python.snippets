@@ -1,0 +1,69 @@
+global !p
+
+
+class Param(object):
+	"""A wrapper for a Python (kw)arg."""
+
+	def __init__(self, param):
+		self._param = param
+
+	@property
+	def param(self):
+		return self._param
+
+	def name(self):
+		return self._param.split('=')[0].strip()
+
+
+def parse_params(paramlist):
+	return [Param(param) for param in paramlist.split(',')]
+
+
+def add_params_to_docstring(params, snip):
+	for param in params:
+		snip += ':param {}:'.format(param.name())
+
+
+def write_super_initializer(classname, supername, snip):
+	if supername != 'object':
+		snip += 'super({}, self).__init__()'.format(classname)
+
+
+def write_class_vars(params, snip):
+	for param in params:
+		snip += 'self._{} = {}'.format(param.name(), param.name())
+
+
+def write_properties(params, snip):
+	for i, param in enumerate(params):
+		snip += '@property'
+		snip += 'def {}(self):'.format(param.name())
+		snip >> 1
+		snip += 'return self._{}'.format(param.name())
+		if i < len(params) - 1:
+			snip.rv += '\n'
+		snip << 1
+
+
+endglobal
+
+snippet cl "New-style Python class" b
+class ${1:ClassName}(${2:object}):
+	"""
+	${3:Docstring.}
+`!p
+snip >> 1
+add_params_to_docstring(parse_params(t[4]), snip)`
+	"""
+
+	def __init__(self, ${4:param_name}):`!p
+snip >> 2
+write_super_initializer(t[1], t[2], snip)
+write_class_vars(parse_params(t[4]), snip)
+`
+		$0
+`!p
+snip >> 1
+write_properties(parse_params(t[4]), snip)
+`
+endsnippet

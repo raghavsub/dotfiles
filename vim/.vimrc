@@ -45,5 +45,9 @@ nmap ]q <Plug>(qf_qf_next)
 
 " VARIABLES
 
-" clean up netrw
+" netrw
 let g:netrw_banner = 0
+
+" ultisnips
+let g:UltiSnipsJumpForwardTrigger = "<Tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
