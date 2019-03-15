@@ -45,8 +45,8 @@ nnoremap [b :bprevious<CR>
 nnoremap ]b :bnext<CR>
 
 " quickfix navigation
-nmap [q :qprevious<CR>
-nmap ]q :qnext<CR>
+nmap [q :cprevious<CR>
+nmap ]q :cnext<CR>
 
 " VARIABLES
 
