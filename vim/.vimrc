@@ -11,16 +11,13 @@ set hidden
 set laststatus=2
 set number
 set ruler
+set wildmenu
 
 " better search
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-" wildcards
-set wildcharm=<C-Z>
-set wildmenu
 
 " swapfile management
 set directory^=~/.tmp//
@@ -40,7 +37,7 @@ endif
 nnoremap <C-L> :nohlsearch<CR><C-L>
 
 " buffer navigation
-nnoremap ,b :buffer <C-Z><S-Tab>
+nnoremap gb :ls<CR>:buffer<Space>
 nnoremap [b :bprevious<CR>
 nnoremap ]b :bnext<CR>
 
