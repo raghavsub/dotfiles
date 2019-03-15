@@ -1,23 +1,26 @@
 filetype plugin indent on
 syntax on
-colorscheme apprentice
+silent! colorscheme apprentice
 
 " OPTIONS
 
-" basics
+" general
 set autoindent
-set backspace=indent,eol,start
+set backspace=2
 set hidden
 set laststatus=2
 set number
 set ruler
-set wildmenu
 
 " better search
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" wildcards
+set wildcharm=<C-Z>
+set wildmenu
 
 " swapfile management
 set directory^=~/.tmp//
@@ -36,12 +39,14 @@ endif
 " clear search highlighting
 nnoremap <C-L> :nohlsearch<CR><C-L>
 
-" magic buffer navigation
-nnoremap gb :ls<CR>:b<Space>
+" buffer navigation
+nnoremap ,b :buffer <C-Z><S-Tab>
+nnoremap [b :bprevious<CR>
+nnoremap ]b :bnext<CR>
 
-" vim-qf quickfix navigation
-nmap [q <Plug>(qf_qf_previous)
-nmap ]q <Plug>(qf_qf_next)
+" quickfix navigation
+nmap [q :qprevious<CR>
+nmap ]q :qnext<CR>
 
 " VARIABLES
 
@@ -51,4 +56,3 @@ let g:netrw_banner = 0
 " ultisnips
 let g:UltiSnipsJumpForwardTrigger = "<Tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
-let g:UltiSnipsSnippetDirectories = [$HOME . "/.vim/UltiSnips"]
