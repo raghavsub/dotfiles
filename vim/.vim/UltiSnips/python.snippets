@@ -18,8 +18,12 @@ class Param(object):
 		return self.param.split('=')[0].strip()
 
 
-def parse_params(paramlist):
-	return [Param(param) for param in paramlist.split(',') if param != 'self']
+def parse_params(raw_params):
+	params = []
+	for param in raw_params.strip().split(','):
+		if param.strip() and param.strip() != 'self':
+			params.append(Param(param.strip()))
+	return params
 
 
 def add_params_to_docstring(params, snip):
@@ -59,7 +63,7 @@ snip >> 1
 add_params_to_docstring(parse_params(t[4]), snip)`
 	"""
 
-	def __init__(${4:self}):`!p
+	def __init__(self$4):`!p
 snip >> 2
 write_super_initializer(t[1], t[2], snip)
 write_class_vars(parse_params(t[4]), snip)
