@@ -36,19 +36,19 @@ endif
 
 " MAPPINGS
 
-" clear search highlighting
-nnoremap <C-L> :nohlsearch<CR><C-L>
-
 " navigation
 nnoremap ,f :find *
 nnoremap ,b :buffer *
 nnoremap ,j :tjump /
 
 " unimpaired-style mappings
-nnoremap [b :bprevious<CR>
-nnoremap ]b :bnext<CR>
-nnoremap [q :cprevious<CR>
-nnoremap ]q :cnext<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [q :cprevious<CR>
+nnoremap <silent> ]q :cnext<CR>
+
+" clear search highlighting
+nnoremap <silent> ,/ :nohlsearch<CR>
 
 " VARIABLES
 
