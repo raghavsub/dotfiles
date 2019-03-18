@@ -18,7 +18,3 @@
 	path = vim/.vim/pack/bundle/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/ultisnips"]
-	path = vim/.vim/pack/bundle/start/ultisnips
-	url = https://github.com/sirver/ultisnips.git
-	branch = master
