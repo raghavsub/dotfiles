@@ -6,7 +6,7 @@ silent! colorscheme apprentice
 
 " general
 set autoindent
-set backspace=2
+set backspace=indent,eol,start
 set hidden
 set laststatus=2
 set number
@@ -20,7 +20,10 @@ set ignorecase
 set smartcase
 
 " swapfile management
-set directory^=~/.tmp//
+set directory=~/.tmp//,.
+
+" find path
+set path=.,**
 
 " ctags in git repos
 set tags^=.git/tags;
@@ -36,14 +39,16 @@ endif
 " clear search highlighting
 nnoremap <C-L> :nohlsearch<CR><C-L>
 
-" buffer navigation
-nnoremap gb :ls<CR>:buffer<Space>
+" navigation
+nnoremap ,f :find *
+nnoremap ,b :buffer *
+nnoremap ,j :tjump /
+
+" unimpaired-style mappings
 nnoremap [b :bprevious<CR>
 nnoremap ]b :bnext<CR>
-
-" quickfix navigation
-nmap [q :cprevious<CR>
-nmap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
 
 " VARIABLES
 
