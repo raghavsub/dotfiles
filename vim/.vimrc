@@ -51,7 +51,7 @@ nnoremap <silent> [q :cprevious<CR>
 nnoremap <silent> ]q :cnext<CR>
 
 " clear search highlighting
-nnoremap <silent> ,/ :nohlsearch<CR>
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " VARIABLES
 
