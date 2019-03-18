@@ -19,14 +19,17 @@ set incsearch
 set ignorecase
 set smartcase
 
-" swapfile management
-set directory=~/.tmp//,.
+" wildignore
+set wildignore+=*.pyc
 
 " find path
 set path=.,**
 
 " ctags in git repos
 set tags^=.git/tags;
+
+" swapfile management
+set directory=~/.tmp//,.
 
 " ag
 if executable("ag")
