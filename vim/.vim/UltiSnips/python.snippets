@@ -13,16 +13,15 @@ class Param(object):
 	@property
 	def param(self):
 		return self._param
-
+	
+	@property
 	def name(self):
 		return self.param.split('=')[0].strip()
 
 
 def parse_params(raw_params):
-	params = []
-	for param in raw_params.strip().split(','):
-		if param.strip() and param.strip() != 'self':
-			params.append(Param(param.strip()))
+	params = [Param(param) for param in raw_params.split(',') if param]
+	params = [param for param in params if param.name != 'self']
 	return params
 
 
@@ -30,7 +29,7 @@ def add_params_to_docstring(params, snip):
 	if params:
 		snip.rv += '\n'
 		for param in params:
-			snip += ':param {}:'.format(param.name())
+			snip += ':param {}:'.format(param.name)
 
 
 def write_super_initializer(classname, supername, snip):
@@ -40,15 +39,15 @@ def write_super_initializer(classname, supername, snip):
 
 def write_class_vars(params, snip):
 	for param in params:
-		snip += 'self._{} = {}'.format(param.name(), param.name())
+		snip += 'self._{} = {}'.format(param.name, param.name)
 
 
 def write_properties(params, snip):
 	for i, param in enumerate(params):
 		snip += '@property'
-		snip += 'def {}(self):'.format(param.name())
+		snip += 'def {}(self):'.format(param.name)
 		snip >> 1
-		snip += 'return self._{}'.format(param.name())
+		snip += 'return self._{}'.format(param.name)
 		if i < len(params) - 1:
 			snip.rv += '\n'
 		snip << 1
@@ -81,7 +80,6 @@ def ${1:function_name}($2):
 	${3:Docstring.}`!p
 snip >> 1
 add_params_to_docstring(parse_params(t[2]), snip)`
-	:return:
 	"""
 	$0
 endsnippet
