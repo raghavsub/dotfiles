@@ -2,6 +2,10 @@
 	path = vim/.vim/pack/bundle/start/apprentice
 	url = https://github.com/romainl/apprentice.git
 	branch = master
+[submodule "vim/.vim/pack/bundle/start/ultisnips"]
+	path = vim/.vim/pack/bundle/start/ultisnips
+	url = git@github.com:sirver/ultisnips.git
+	branch = master
 [submodule "vim/.vim/pack/bundle/start/vim-qf"]
 	path = vim/.vim/pack/bundle/start/vim-qf
 	url = https://github.com/romainl/vim-qf.git
