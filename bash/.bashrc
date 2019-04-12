@@ -32,7 +32,7 @@ alias la="ls -A"
 alias ll="ls -Ahl"
 
 # ssh agent forwarding in tmux
-alias fixssh="eval "$(tmux show-environment -s SSH_AUTH_SOCK)""
+alias fixssh='eval "$(tmux show-environment -s SSH_AUTH_SOCK)"'
 
 # python webserver
 alias serve="python3 -m http.server"
