@@ -30,3 +30,9 @@ fi
 if [[ -f "$HOME"/.fzf.bash ]] ; then
     . "$HOME"/.fzf.bash
 fi
+
+# ssh agent forwarding in tmux
+fixssh()
+{
+    eval "export $(tmux show-environment -g SSH_AUTH_SOCK)"
+}
