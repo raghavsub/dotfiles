@@ -26,8 +26,13 @@ if [[ -f "$HOME"/.fzf.bash ]] ; then
     . "$HOME"/.fzf.bash
 fi
 
+# ls colors
+case "$(uname -s)" in
+    Linux*) alias ls="ls --color=auto";;
+    Darwin*) alias ls="ls -G";;
+esac
+
 # ls aliases
-alias ls="ls -G"
 alias la="ls -A"
 alias ll="ls -Ahl"
 
