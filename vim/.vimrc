@@ -33,8 +33,8 @@ set directory=~/.tmp//,.
 
 " ag
 if executable("ag")
-  set grepprg=ag\ --vimgrep\ $*
-  set grepformat=%f:%l:%c:%m
+    set grepprg=ag\ --vimgrep\ $*
+    set grepformat=%f:%l:%c:%m
 endif
 
 " MAPPINGS
