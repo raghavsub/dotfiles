@@ -60,7 +60,3 @@ nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " netrw
 let g:netrw_banner = 0
-
-" ultisnips
-let g:UltiSnipsJumpForwardTrigger = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
