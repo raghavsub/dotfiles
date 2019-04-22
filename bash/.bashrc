@@ -21,6 +21,11 @@ if [[ -f /usr/local/etc/bash_completion ]] ; then
     . /usr/local/etc/bash_completion
 fi
 
+# ruby
+if [[ -d /usr/local/opt/ruby/bin ]] ; then
+    export PATH="/usr/local/opt/ruby/bin:"$PATH""
+fi
+
 # fzf
 if [[ -f "$HOME"/.fzf.bash ]] ; then
     . "$HOME"/.fzf.bash
