@@ -6,10 +6,6 @@
 	path = vim/.vim/pack/bundle/start/vim-qf
 	url = https://github.com/romainl/vim-qf.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-lion"]
-	path = vim/.vim/pack/bundle/start/vim-lion
-	url = https://github.com/tommcdo/vim-lion.git
-	branch = master
 [submodule "vim/.vim/pack/bundle/start/vim-commentary"]
 	path = vim/.vim/pack/bundle/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
