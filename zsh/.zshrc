@@ -17,13 +17,12 @@ SAVEHIST=1000
 
 # prompt
 autoload -Uz vcs_info
-zstyle ':vcs_info:git:*' formats '[%b] '
+zstyle ':vcs_info:git:*' formats '(%b) '
 setopt prompt_subst
 precmd() {
     vcs_info
 }
-PROMPT='%{$fg[white]%}%c %{$reset_color%}$ '
-RPROMPT='%{$fg_bold[red]%}$vcs_info_msg_0_%{$reset_color%}'
+PROMPT='%{$fg[green]%}%c %{$fg[yellow]%}$vcs_info_msg_0_%{$reset_color%}$ '
 
 # colors
 autoload -Uz colors
