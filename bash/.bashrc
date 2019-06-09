@@ -14,7 +14,7 @@ HISTFILESIZE=2000
 shopt -s histappend
 
 # prompt
-PS1="\[\e[37m\]\W\[\e[0m\] $ "
+PS1="\[\e[34m\]\W\[\e[0m\] $ "
 
 # enable completion
 if [[ -f /usr/local/etc/bash_completion ]] ; then
