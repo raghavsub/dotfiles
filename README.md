@@ -1,6 +1,6 @@
 # dotfiles
 
-My bash+git+tmux+vim dotfiles
+My git+tmux+vim+zsh dotfiles
 
 ## Installation
 
@@ -8,8 +8,8 @@ My bash+git+tmux+vim dotfiles
 git clone https://github.com/raghavsub/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 git submodule update --init
-stow bash
 stow git
 stow tmux
 stow vim
+stow zsh
 ```
