@@ -1,3 +1,7 @@
+[submodule "vim/.vim/pack/bundle/start/Apprentice"]
+	path = vim/.vim/pack/bundle/start/Apprentice
+	url = https://github.com/romainl/Apprentice.git
+	branch = master
 [submodule "vim/.vim/pack/bundle/start/vim-qf"]
 	path = vim/.vim/pack/bundle/start/vim-qf
 	url = https://github.com/romainl/vim-qf.git
