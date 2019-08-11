@@ -1,20 +1,20 @@
-[submodule "vim/.vim/pack/bundle/start/Apprentice"]
-	path = vim/.vim/pack/bundle/start/Apprentice
+[submodule "vim/.vim/pack/plugins/start/Apprentice"]
+	path = vim/.vim/pack/plugins/start/Apprentice
 	url = https://github.com/romainl/Apprentice.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-qf"]
-	path = vim/.vim/pack/bundle/start/vim-qf
+[submodule "vim/.vim/pack/plugins/start/vim-qf"]
+	path = vim/.vim/pack/plugins/start/vim-qf
 	url = https://github.com/romainl/vim-qf.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-commentary"]
-	path = vim/.vim/pack/bundle/start/vim-commentary
+[submodule "vim/.vim/pack/plugins/start/vim-commentary"]
+	path = vim/.vim/pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-repeat"]
-	path = vim/.vim/pack/bundle/start/vim-repeat
+[submodule "vim/.vim/pack/plugins/start/vim-repeat"]
+	path = vim/.vim/pack/plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 	branch = master
-[submodule "vim/.vim/pack/bundle/start/vim-surround"]
-	path = vim/.vim/pack/bundle/start/vim-surround
+[submodule "vim/.vim/pack/plugins/start/vim-surround"]
+	path = vim/.vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	branch = master
