@@ -39,19 +39,19 @@ endif
 
 " MAPPINGS
 
-" navigation
+" symbol-based navigation
 nnoremap ,f :find *
 nnoremap ,b :buffer *
 nnoremap ,j :tjump /
 
-" alternate file
-nnoremap ,, <C-^>
+" list navigation
+nnoremap <silent> <PageUp> :bprevious<CR>
+nnoremap <silent> <PageDown> :bnext<CR>
+nnoremap <silent> <End> :cnext<CR>
+nnoremap <silent> <Home> :cprevious<CR>
 
-" unimpaired-style mappings
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [q :cprevious<CR>
-nnoremap <silent> ]q :cnext<CR>
+" edit alternate file
+nnoremap ,, <C-^>
 
 " clear search highlighting
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
