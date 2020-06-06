@@ -45,10 +45,10 @@ nnoremap ,b :buffer *
 nnoremap ,j :tjump /
 
 " list navigation
-nnoremap <silent> <PageUp> :bprevious<CR>
-nnoremap <silent> <PageDown> :bnext<CR>
-nnoremap <silent> <End> :cnext<CR>
-nnoremap <silent> <Home> :cprevious<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [c :cnext<CR>
+nnoremap <silent> ]c :cprevious<CR>
 
 " edit alternate file
 nnoremap ,, <C-^>
