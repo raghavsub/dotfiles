@@ -44,11 +44,17 @@ nnoremap ,f :find *
 nnoremap ,b :buffer *
 nnoremap ,j :tjump /
 
-" list navigation
+" list navigation (normie keyboard)
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [c :cprevious<CR>
 nnoremap <silent> ]c :cnext<CR>
+
+" list navigation (ergo keyboard)
+nnoremap <silent> <PageUp> :bprevious<CR>
+nnoremap <silent> <PageDown> :bnext<CR>
+nnoremap <silent> <End> :cnext<CR>
+nnoremap <silent> <Home> :cprevious<CR>
 
 " edit alternate file
 nnoremap ,, <C-^>

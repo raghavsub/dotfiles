@@ -42,6 +42,9 @@ alias fixssh='eval "$(tmux show-environment -s SSH_AUTH_SOCK)"'
 # python webserver
 alias serve="python3 -m http.server"
 
+# venv activate
+alias act="source venv/bin/activate"
+
 # ruby
 if [[ -d /usr/local/opt/ruby/bin ]] ; then
     export PATH="/usr/local/opt/ruby/bin:"$PATH""
