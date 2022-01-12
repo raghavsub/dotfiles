@@ -40,7 +40,7 @@ alias ll="ls -Ahl"
 alias fixssh='eval "$(tmux show-environment -s SSH_AUTH_SOCK)"'
 
 # python webserver
-alias serve="python3 -m http.server"
+alias serve="python3 -m http.server 8888"
 
 # venv activate
 alias act="source venv/bin/activate"
