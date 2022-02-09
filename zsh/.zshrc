@@ -32,7 +32,11 @@ case "$(uname -s)" in
     Linux*) alias ls="ls --color=auto";;
 esac
 
+# zmv
+autoload -Uz zmv
+
 # ls aliases
+alias l="ls"
 alias la="ls -A"
 alias ll="ls -Ahl"
 
