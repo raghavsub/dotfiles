@@ -49,11 +49,6 @@ alias serve="python3 -m http.server 8888"
 # venv activate
 alias act="source venv/bin/activate"
 
-# ruby
-if [[ -d /usr/local/opt/ruby/bin ]] ; then
-    export PATH="/usr/local/opt/ruby/bin:"$PATH""
-fi
-
 # fzf
 if [[ -f "$HOME"/.fzf.zsh ]] ; then
     . "$HOME"/.fzf.zsh
