@@ -54,5 +54,10 @@ if [[ -f "$HOME"/.fzf.zsh ]] ; then
     . "$HOME"/.fzf.zsh
 fi
 
+# miniconda
+if [[ -f "$HOME"/miniconda3/etc/profile.d/conda.sh ]] ; then
+    . "$HOME"/miniconda3/etc/profile.d/conda.sh
+fi
+
 # editor
 export EDITOR=vim
