@@ -1,5 +1,5 @@
 " color column
-setlocal colorcolumn=100
+setlocal colorcolumn=101
 
 " makeprg
 if executable("flake8")
