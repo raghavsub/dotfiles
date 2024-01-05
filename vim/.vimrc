@@ -58,5 +58,13 @@ nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " VARIABLES
 
-" netrw
+" hide netrw banner
 let g:netrw_banner = 0
+
+" AUTOCOMMANDS
+
+" hide netrw buffer
+augroup netrw
+    autocmd!
+    autocmd FileType netrw setlocal bufhidden=wipe
+augroup end
