@@ -2,13 +2,17 @@
 	path = vim/.vim/pack/plugins/start/Apprentice
 	url = https://github.com/romainl/Apprentice.git
 	branch = master
-[submodule "vim/.vim/pack/plugins/start/vim-qf"]
-	path = vim/.vim/pack/plugins/start/vim-qf
-	url = https://github.com/romainl/vim-qf.git
-	branch = master
 [submodule "vim/.vim/pack/plugins/start/vim-commentary"]
 	path = vim/.vim/pack/plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+	branch = master
+[submodule "vim/.vim/pack/plugins/start/vim-lsc"]
+	path = vim/.vim/pack/plugins/start/vim-lsc
+	url = https://github.com/natebosch/vim-lsc.git
+	branch = master
+[submodule "vim/.vim/pack/plugins/start/vim-qf"]
+	path = vim/.vim/pack/plugins/start/vim-qf
+	url = https://github.com/romainl/vim-qf.git
 	branch = master
 [submodule "vim/.vim/pack/plugins/start/vim-repeat"]
 	path = vim/.vim/pack/plugins/start/vim-repeat
