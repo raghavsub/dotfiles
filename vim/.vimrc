@@ -27,7 +27,7 @@ set path=.,**
 set directory=~/.tmp//,.
 
 " ag
-if executable("ag")
+if executable('ag')
     set grepprg=ag\ --vimgrep\ $*
     set grepformat=%f:%l:%c:%m
 endif
@@ -35,7 +35,6 @@ endif
 " symbol-based navigation
 nnoremap ,f :find *
 nnoremap ,b :buffer *
-nnoremap ,j :tjump /
 
 " list navigation
 nnoremap <silent> [b :bprevious<CR>
