@@ -22,6 +22,9 @@
 [color]
     ui = true
 
+[rerere]
+    enabled = true
+
 [user]
     name = Raghav Subramaniam
     email = raghavs511@gmail.com
