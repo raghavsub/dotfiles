@@ -22,7 +22,7 @@ setopt prompt_subst
 precmd() {
     vcs_info
 }
-PROMPT='%{$fg[green]%}%c %{$fg[yellow]%}$vcs_info_msg_0_%{$reset_color%}$ '
+PROMPT='%{$fg[green]%}%c %{$fg[yellow]%}$vcs_info_msg_0_%{$reset_color%}👉 '
 
 # colors
 autoload -Uz colors
@@ -52,11 +52,6 @@ alias act="source venv/bin/activate"
 # fzf
 if [[ -f "$HOME"/.fzf.zsh ]] ; then
     . "$HOME"/.fzf.zsh
-fi
-
-# miniconda
-if [[ -f "$HOME"/miniconda3/etc/profile.d/conda.sh ]] ; then
-    . "$HOME"/miniconda3/etc/profile.d/conda.sh
 fi
 
 # editor
